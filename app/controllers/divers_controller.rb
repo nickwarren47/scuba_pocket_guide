@@ -1,0 +1,2 @@
+class DiversController < ApplicationController
+end

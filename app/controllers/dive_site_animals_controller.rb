@@ -1,0 +1,2 @@
+class DiveSiteAnimalsController < ApplicationController
+end

@@ -10,29 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_19_234333) do
+ActiveRecord::Schema.define(version: 2022_09_20_173702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "animals", force: :cascade do |t|
-    t.string "common_name"
+    t.string "name"
     t.string "species_name"
     t.integer "size"
     t.string "image_url"
     t.boolean "dangerous"
-    t.string "description"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "destinations", force: :cascade do |t|
-    t.string "country_or_territory"
-    t.string "continent"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "flag_url"
-    t.string "image_url"
   end
 
   create_table "dive_logs", force: :cascade do |t|
@@ -88,37 +79,8 @@ ActiveRecord::Schema.define(version: 2022_09_19_234333) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.integer "rating"
-    t.string "image_url"
-    t.text "review"
-    t.text "pro_tip"
-    t.integer "length_of_stay"
-    t.string "city"
-    t.bigint "user_id", null: false
-    t.bigint "destination_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["destination_id"], name: "index_reviews_on_destination_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.integer "age"
-    t.string "location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "avatar"
-  end
-
   add_foreign_key "dive_logs", "dive_sites"
   add_foreign_key "dive_logs", "divers"
   add_foreign_key "dive_site_animals", "animals"
   add_foreign_key "dive_site_animals", "dive_sites"
-  add_foreign_key "reviews", "destinations"
-  add_foreign_key "reviews", "users"
 end

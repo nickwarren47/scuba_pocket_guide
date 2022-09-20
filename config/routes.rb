@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :dive_logs
   resources :dive_site_animals
   resources :animals
+  resources :dive_logs
   resources :dive_sites
   resources :divers
   # Routing logic: fallback requests for React Router.

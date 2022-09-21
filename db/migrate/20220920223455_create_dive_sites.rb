@@ -4,6 +4,7 @@ class CreateDiveSites < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :country
       t.string :image_url
+      t.string :country_flag
 
       t.timestamps
     end

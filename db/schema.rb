@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_20_173702) do
+ActiveRecord::Schema.define(version: 2022_09_21_010847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,10 +27,9 @@ ActiveRecord::Schema.define(version: 2022_09_20_173702) do
   end
 
   create_table "dive_logs", force: :cascade do |t|
-    t.bigint "diver_id", null: false
-    t.bigint "dive_site_id", null: false
     t.integer "dive_number"
     t.string "dive_site_name"
+    t.string "dive_site_country"
     t.date "date"
     t.datetime "time_in"
     t.datetime "time_out"
@@ -43,6 +42,8 @@ ActiveRecord::Schema.define(version: 2022_09_20_173702) do
     t.boolean "fresh_or_salt_water"
     t.boolean "shore_or_boat"
     t.boolean "training_dive"
+    t.bigint "diver_id", null: false
+    t.bigint "dive_site_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dive_site_id"], name: "index_dive_logs_on_dive_site_id"
@@ -62,6 +63,7 @@ ActiveRecord::Schema.define(version: 2022_09_20_173702) do
     t.string "name"
     t.string "country"
     t.string "image_url"
+    t.string "country_flag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

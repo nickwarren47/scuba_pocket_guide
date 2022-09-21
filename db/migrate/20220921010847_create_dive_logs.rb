@@ -1,10 +1,9 @@
 class CreateDiveLogs < ActiveRecord::Migration[6.1]
   def change
     create_table :dive_logs do |t|
-      t.belongs_to :diver, null: false, foreign_key: true
-      t.belongs_to :dive_site, null: false, foreign_key: true
       t.integer :dive_number
       t.string :dive_site_name
+      t.string :dive_site_country
       t.date :date
       t.datetime :time_in
       t.datetime :time_out
@@ -17,6 +16,8 @@ class CreateDiveLogs < ActiveRecord::Migration[6.1]
       t.boolean :fresh_or_salt_water
       t.boolean :shore_or_boat
       t.boolean :training_dive
+      t.belongs_to :diver, null: false, foreign_key: true
+      t.belongs_to :dive_site, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -7,7 +7,7 @@ class CreateDiveLogs < ActiveRecord::Migration[6.1]
       t.date :date
       t.datetime :time_in
       t.datetime :time_out
-      t.integer :depth
+      t.integer :depth_achieved
       t.integer :starting_psi
       t.integer :ending_psi
       t.integer :air_temp

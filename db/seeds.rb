@@ -8,12 +8,12 @@
 
 puts "Seeding..."
 
-d1 = Diver.create(name: "Charlie Brown", username: "snoopy<3", country_from: "USA", diver_cert_level: "Open Water", age: 29, disclaimer: true, email: "i<3diving@gmail.com", password_digest: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
-d2 = Diver.create(name: "Jon Snow", username: "sword", country_from: "Israel", diver_cert_level: "Dive Master", age: 31, disclaimer: true, email: "diving4life@gmail.com", password_digest: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
-d3 = Diver.create(name: "Captain Kirk", username: "vulcan$", country_from: "USA", diver_cert_level: "Advanced Open Water", age: 44, disclaimer: true, email: "boldlygo@gmail.com", password_digest: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
-d4 = Diver.create(name: "Khan!!", username: "mutant", country_from: "Australia", diver_cert_level: "Open Water", age: 92, disclaimer: true, email: "revengetokirk@gmail.com", password_digest: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
-d5 = Diver.create(name: "Gorn", username: "Liz@rd", country_from: "China", diver_cert_level: "Rescue Diver", age: 57, disclaimer: true, email: "eat@gmail.com", password_digest: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
-d6 = Diver.create(name: "Horse", username: "N3h", country_from: "Tanzania", diver_cert_level: "Open Water", age: 22, disclaimer: true, email: "hello@gmail.com", password_digest: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
+d1 = Diver.create(name: "Charlie Brown", username: "snoopy<3", country_from: "USA", diver_cert_level: "Open Water", age: 29, disclaimer: true, email: "i<3diving@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
+d2 = Diver.create(name: "Jon Snow", username: "sword", country_from: "Israel", diver_cert_level: "Dive Master", age: 31, disclaimer: true, email: "diving4life@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
+d3 = Diver.create(name: "Captain Kirk", username: "vulcan$", country_from: "USA", diver_cert_level: "Advanced Open Water", age: 44, disclaimer: true, email: "boldlygo@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
+d4 = Diver.create(name: "Khan!!", username: "mutant", country_from: "Australia", diver_cert_level: "Open Water", age: 92, disclaimer: true, email: "revengetokirk@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
+d5 = Diver.create(name: "Gorn", username: "Liz@rd", country_from: "China", diver_cert_level: "Rescue Diver", age: 57, disclaimer: true, email: "eat@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
+d6 = Diver.create(name: "Horse", username: "N3h", country_from: "Tanzania", diver_cert_level: "Open Water", age: 22, disclaimer: true, email: "hello@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
 
 
 
@@ -130,6 +130,9 @@ ds31 = DiveSite.create(name: "Seargent Major", country: "Jamaica", rating: 3, de
 ds32 = DiveSite.create(name: "Airport Reef", country: "Jamaica", rating: 4, depth: 12, diver_skill_level: "Novice", image_url: "https://user-images.githubusercontent.com/106715328/191599362-e843b793-e974-4e9e-bacc-096cdd8a1257.jpg", country_flag:"https://user-images.githubusercontent.com/106715328/191592841-74a768ab-997f-45b4-89f6-fc4365220318.jpg", description: "Swim through caverns. This reef is for exploration divers. And some things to see are Southern Stingrays, Mutton Snappers, Basket and Flying Gurnard.")
 
 
-dsa1 = DiveSiteAnimal.create()
+dsa1 = DiveSiteAnimal.create(dive_site: ds5, animal: a1)
 
-dl1 = DiveLog.create(dive_number: 1, dive_site_name: "Victory Reef", dive_site_country: "Bahamas",  )
+dl1 = DiveLog.create(dive_number: 1, dive_site_name: "Victory Reef", dive_site_country: "Bahamas", depth_achieved: 12, date: DateTime.now(), time_in: Time.now, time_out: Time.now + 7200, starting_psi: 1300, ending_psi: 500, air_temp: 27, surface_temp: 24, bottom_temp: 22, fresh_or_salt_water: true, shore_or_boat: true, training_dive: false, diver_id: d2.id, dive_site_id: ds21.id)
+
+
+puts "Finished Seeding!"

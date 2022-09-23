@@ -384,6 +384,9 @@ dsa253 = DiveSiteAnimal.create(dive_site: ds23, animal: a38)
 dsa254 = DiveSiteAnimal.create(dive_site: ds23, animal: a39)
 dsa255 = DiveSiteAnimal.create(dive_site: ds24, animal: a51)
 dsa256 = DiveSiteAnimal.create(dive_site: ds24, animal: a52)
+dsa257 = DiveSiteAnimal.create(dive_site: ds24, animal: a43)
+dsa258 = DiveSiteAnimal.create(dive_site: ds24, animal: a41)
+dsa259 = DiveSiteAnimal.create(dive_site: ds24, animal: a42)
 
 
 

@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2022_09_22_030921) do
     t.string "country_flag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "depth"
+    t.integer "avg_depth"
     t.text "description"
     t.string "diver_skill_level"
     t.integer "rating"

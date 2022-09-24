@@ -8,6 +8,7 @@
 
 puts "Seeding..."
 
+puts "Creating divers..."
 d1 = Diver.create(name: "Charlie Brown", username: "snoopy<3", country_from: "USA", diver_cert_level: "Open Water", age: 29, disclaimer: true, email: "i<3diving@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
 d2 = Diver.create(name: "Jon Snow", username: "sword", country_from: "Israel", diver_cert_level: "Dive Master", age: 31, disclaimer: true, email: "diving4life@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
 d3 = Diver.create(name: "Captain Kirk", username: "vulcan$", country_from: "USA", diver_cert_level: "Advanced Open Water", age: 44, disclaimer: true, email: "boldlygo@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
@@ -17,7 +18,7 @@ d6 = Diver.create(name: "Horse", username: "N3h", country_from: "Tanzania", dive
 
 
 
-
+puts "Creating animals..."
 a1 = Animal.create(name: "Queen Triggerfish", species_name: "Balistes vetula" , size: 45, image_url: "https://user-images.githubusercontent.com/106715328/191372019-f39361c9-097f-4ccb-982b-6a6b0a7053a7.jpg", dangerous: true, description: "A tropical fish that comes in a variety of colors. Commonly found with a large, venemous barb.")
 a2 = Animal.create(name: "French Angelfish", species_name: "Pomacanthus paru", size: 25, image_url: "https://user-images.githubusercontent.com/106715328/191371334-34bbb29e-1629-4ead-b970-b201cb4bfa1d.jpg", dangerous: false, description: "A tropical fish with black and yellow stripes.")
 a3 = Animal.create(name: "Grey Angelfish", species_name: "Pomacanthus arcuatus", size: 25, image_url: "https://user-images.githubusercontent.com/106715328/191371516-217d8478-8ed5-45c7-a29d-4749063edc42.jpg", dangerous: false, description: "Juviniles look similar to the French Angelfish but become grey with age.")
@@ -98,7 +99,7 @@ a76 = Animal.create(name: "Mahi-mahi", species_name: "Coryphaena hippurus" , siz
 a77 = Animal.create(name: "Reef Stonefish", species_name: "Synanceja Verrucosa" , size: 35, image_url: "https://user-images.githubusercontent.com/106715328/191872007-7d87d98e-8b6e-4c1b-957e-d6d58058c5f1.jpg", dangerous: true, description: "This is the most venemous fish in the ocean. It is well camofluged and injects venom through the spines on its back. Do not touch and give plenty of space if you see one.")
 
 
-
+puts "Creating dive sites..."
 ds1 = DiveSite.create(name: "The Vera", country: "Aruba", rating: 3, avg_depth: 0, diver_skill_level: "unknown", image_url: "https://user-images.githubusercontent.com/106715328/191394158-c8feff3c-10aa-460b-ac76-2e1080d51ffb.jpg", country_flag:"https://user-images.githubusercontent.com/106715328/191392919-89cf69e2-b2af-45b6-afb9-5d7ae2ddac4e.jpg", description: "The Vera is a freighter that sank near Aruba in 1954 on its way from South to North America.")
 ds2 = DiveSite.create(name: "Cudarebo Rocks", country: "Aruba", rating: 4, avg_depth: 0, diver_skill_level: "Novice", image_url: "https://user-images.githubusercontent.com/106715328/191394157-4fed6127-36fa-4c7a-8c5f-b3796503e3e8.jpg", country_flag:"https://user-images.githubusercontent.com/106715328/191392919-89cf69e2-b2af-45b6-afb9-5d7ae2ddac4e.jpg", description: "Huge waves crash around the Cudarebo Rocks at the northernmost point of the island. On calm days, divers and snorkelers will encounter a multitude of fish here.")
 ds3 = DiveSite.create(name: "Californian", country: "Aruba", rating: 3, avg_depth: 0, diver_skill_level: "unknown", image_url: "https://user-images.githubusercontent.com/106715328/191394155-2694c1e3-4a20-43cb-8e76-777cb21c3792.jpg", country_flag:"https://user-images.githubusercontent.com/106715328/191392919-89cf69e2-b2af-45b6-afb9-5d7ae2ddac4e.jpg", description: "The steamer Californian was stranded on the rocks jutting out from Aruba's northwest coast.")
@@ -133,6 +134,7 @@ ds31 = DiveSite.create(name: "Seargent Major", country: "Jamaica", rating: 3, av
 ds32 = DiveSite.create(name: "Airport Reef", country: "Jamaica", rating: 4, avg_depth: 12, diver_skill_level: "Novice", image_url: "https://user-images.githubusercontent.com/106715328/191599362-e843b793-e974-4e9e-bacc-096cdd8a1257.jpg", country_flag:"https://user-images.githubusercontent.com/106715328/191592841-74a768ab-997f-45b4-89f6-fc4365220318.jpg", description: "Swim through caverns. This reef is for exploration divers. And some things to see are Southern Stingrays, Mutton Snappers, Basket and Flying Gurnard.")
 
 
+puts "Creating Dive Site-Animals..."
 dsa1 = DiveSiteAnimal.create(dive_site: ds1, animal: a1)
 dsa2 = DiveSiteAnimal.create(dive_site: ds1, animal: a2)
 dsa3 = DiveSiteAnimal.create(dive_site: ds1, animal: a51)
@@ -369,7 +371,7 @@ dsa233 = DiveSiteAnimal.create(dive_site: ds22, animal: a69)
 dsa234 = DiveSiteAnimal.create(dive_site: ds22, animal: a68)
 dsa235 = DiveSiteAnimal.create(dive_site: ds23, animal: a71)
 dsa236 = DiveSiteAnimal.create(dive_site: ds23, animal: a72)
-dsa237= DiveSiteAnimal.create(dive_site: ds23, animal: a73)
+dsa237 = DiveSiteAnimal.create(dive_site: ds23, animal: a73)
 dsa238 = DiveSiteAnimal.create(dive_site: ds23, animal: a74)
 dsa239 = DiveSiteAnimal.create(dive_site: ds23, animal: a75)
 dsa240 = DiveSiteAnimal.create(dive_site: ds23, animal: a76)

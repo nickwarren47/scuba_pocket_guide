@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Homepage from './Homepage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AboutApp from './AboutApp'; 
+import NavBar from './Navbar'; 
+import Signup from './Signup';
+import Login from './Login';
+import DiveSites from './DiveSites';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  function handleLogout(){
+    setUser(null);
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <NavBar user={user} onLogout={handleLogout}/>
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/about' element={<AboutApp />} />
+          <Route path='/signup' element={<Signup onLogin={setUser} />} /> 
+          {user ? (<h2> Welcome, {user.username}!</h2>) : <Route path='/login' element={<Login />} />}
+          <Route path='/divesites' element={<DiveSites />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

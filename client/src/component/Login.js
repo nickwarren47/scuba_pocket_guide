@@ -28,7 +28,7 @@ function Login(){
     }
 
     return(
-      <div>
+      <div className="bg-[url('https://www.toptal.com/designers/subtlepatterns/uploads/just-waves.png')] min-h-screen">
         <div className="p-5 mx-20 my-4 mb-0 border-2 border-black bg-white">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>

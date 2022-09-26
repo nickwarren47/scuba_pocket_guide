@@ -17,7 +17,7 @@ return(
             <h2 className="text-cyan-200 text-5xl font-bold mt-5 text-center pt-0 pb-6"> Your one-stop shop for aquatic wildlife, dive sites, and so much more</h2>
             <div className="flex items-center justify-center mt-7 space-x-7">
                 <TailwindcssButton>
-                    <Link to="/dive_sites"> Let's Get Diving! </Link>
+                    <Link to="/divesites"> Let's Get Diving! </Link>
                 </TailwindcssButton>
                 {!user ? (
                     <>

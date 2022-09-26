@@ -1,6 +1,6 @@
 import React, { useState } from "react"; 
 import { useNavigate, Link} from "react-router-dom";
-import { Label, TextInput, Button, Toast} from "flowbite-react";
+import { Label, TextInput, Button, Toast, Checkbox, Modal} from "flowbite-react";
 
 function Signup(){
     const [username, setUsername] = useState("");
@@ -11,10 +11,17 @@ function Signup(){
     const [avatar, setAvatar] = useState(""); 
     const [countryFrom, setCountryFrom] = useState(""); 
     const [diverCertLevel, setDiverCertLevel] = useState("");
-    // const [disclaimer, setDisclaimer] = useState(false); 
+    const [disclaimer, setDisclaimer] = useState(false); 
     const [errors, setErrors] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
+    const [modal, setModal] = useState(false);
+
+
+    function toggleModal(){
+        setModal(!modal)
+        console.log(modal)
+    }
 
     function handleSubmit(e){
         e.preventDefault();
@@ -33,7 +40,7 @@ function Signup(){
                 avatar,
                 age, 
                 countryFrom,
-                // disclaimer,
+                disclaimer,
                 diverCertLevel
             }),
         })
@@ -164,17 +171,37 @@ function Signup(){
                             placeholder="Enter your diver certification level..."
                             required={true} />
                     </div>
-                    {/* <div>
-                        <div className="mb-2 block">
-                            <Label
-                                htmlFor="disclaimer"
-                                value="Diclaimer" />
-                        </div>
-                        <div class="flex items-center">
-                            <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="link-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">SPG disclaimer</a>.</label>
-                        </div>
-                    </div> */}
+                    <div className="flex items-center gap-2">
+                        <Checkbox 
+                        id="disclaimer" 
+                        onChange={(e) => setDisclaimer(e.target.value)}
+                        value={disclaimer}
+                        required={true}
+                        />
+                            <>
+                                <Button onClick={toggleModal}>
+                                    User Agreement
+                                </Button>
+                                <Modal
+                                    show={modal}
+                                    onClose={toggleModal}
+                                >
+                                    <Modal.Header>
+                                    Terms of Service
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                    <div className="space-y-6">
+                                        <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                                        </p>
+                                        <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                                        </p>
+                                    </div>
+                                    </Modal.Body>
+                                </Modal>
+                            </>
+                    </div>
                 <Button type="submit" gradientDuoTone="cyanToBlue" pill={true}>
                     {isLoading ? "Loading ..." : "Signup"}
                 </Button>

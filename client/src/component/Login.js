@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react"; 
 import { AuthContext } from "../Context/AuthContext";
-import { useNavigate, useLocation} from "react-router-dom";
-import { Label, TextInput, Button, Toast} from "flowbite-react"
+import { useNavigate, useLocation, Link} from "react-router-dom";
+import { Label, TextInput, Button, Toast } from "flowbite-react";
+
 
 
 function Login(){
@@ -28,8 +29,8 @@ function Login(){
     }
 
     return(
-      <div className="bg-[url('https://www.toptal.com/designers/subtlepatterns/uploads/just-waves.png')] min-h-screen">
-        <div className="p-5 mx-20 my-4 mb-0 border-2 border-black bg-white">
+      <div className="bg-[url('https://user-images.githubusercontent.com/106715328/192160566-39c11383-6372-4f95-b547-f14d3f75dd0b.jpg')] min-h-screen w-full bg-cover bg-center p-20">
+        <div className="p-5 mx-20 my-60 mb-0 border-2 border-black bg-white">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
             <div className="mb-2 block">
@@ -61,9 +62,14 @@ function Login(){
               required={true} 
             />
         </div>
-        <Button type="submit">
+        <Button type="submit" gradientDuoTone="cyanToBlue" pill={true}>
           Login
         </Button>
+        <Link to="/">
+          <Button gradientDuoTone="cyanToBlue" pill={true}>
+              Return to Homepage
+          </Button>
+        </Link>
       </form>
       </div>
       {error ? (

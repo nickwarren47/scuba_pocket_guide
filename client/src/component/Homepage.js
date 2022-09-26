@@ -35,7 +35,7 @@ return(
 )
     function TailwindcssButton(props) {
         return (
-            <button type="button" className="text-white bg-gradient-to-r from-cyan-500 to-cyan-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-large rounded-lg text-3xl px-6 py-4 text-center mr-2 mb-2">{props.children}</button>
+            <button type="button" className="text-white bg-gradient-to-r from-cyan-500 to-cyan-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-large rounded-3xl text-3xl px-6 py-4 text-center mr-2 mb-2">{props.children}</button>
         )
     }
 }

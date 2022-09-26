@@ -1,6 +1,6 @@
 import React, { useState } from "react"; 
-import { useNavigate} from "react-router-dom";
-import { Label, TextInput, Button, Toast} from "flowbite-react"
+import { useNavigate, Link} from "react-router-dom";
+import { Label, TextInput, Button, Toast} from "flowbite-react";
 
 function Signup(){
     const [username, setUsername] = useState("");
@@ -48,8 +48,8 @@ function Signup(){
     }
 
     return (
-        <div>
-            <div className="p-5 mx-20 my-4 mb-0 border-2 border-black bg-white">
+        <div className="bg-[url('https://user-images.githubusercontent.com/106715328/192161678-2717f82a-fc84-4eaa-9691-74793a92d5c7.jpg')] min-h-screen w-full bg-cover bg-center p-20">
+            <div className="p-5 mx-20 my-80 mb-0 border-2 border-black bg-white">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div>
                         <div className="mb-2 block">
@@ -175,9 +175,14 @@ function Signup(){
                             <label for="link-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">SPG disclaimer</a>.</label>
                         </div>
                     </div> */}
-                <Button type="submit">
+                <Button type="submit" gradientDuoTone="cyanToBlue" pill={true}>
                     {isLoading ? "Loading ..." : "Signup"}
                 </Button>
+                <Link to="/">
+                    <Button gradientDuoTone="cyanToBlue" pill={true}>
+                        Return to Homepage
+                    </Button>
+                </Link>
                 {errors ? (
                     <Toast>
                         <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-500 dark:bg-red-800 dark:text-red-200">

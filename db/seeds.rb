@@ -15,6 +15,7 @@ d3 = Diver.create(name: "Captain Kirk", username: "vulcan$", country_from: "USA"
 d4 = Diver.create(name: "Khan!!", username: "mutant", country_from: "Australia", diver_cert_level: "Open Water", age: 92, disclaimer: true, email: "revengetokirk@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
 d5 = Diver.create(name: "Gorn", username: "Liz@rd", country_from: "China", diver_cert_level: "Rescue Diver", age: 57, disclaimer: true, email: "eat@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
 d6 = Diver.create(name: "Horse", username: "N3h", country_from: "Tanzania", diver_cert_level: "Open Water", age: 22, disclaimer: true, email: "hello@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
+d7 = Diver.create(name: "Rachel", username: "Rachel_admin", country_from: "USA", diver_cert_level: "Open Water", age: 29, disclaimer: true, email: "rachel@gmail.com", password: "P3ngu1n$", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
 
 
 

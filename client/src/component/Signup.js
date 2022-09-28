@@ -1,6 +1,7 @@
 import React, { useState } from "react"; 
 import { useNavigate, Link} from "react-router-dom";
-import { Label, TextInput, Button, Toast, Checkbox, Modal} from "flowbite-react";
+import { Label, TextInput, Button, Toast, Checkbox, Modal, Navbar} from "flowbite-react";
+import dive from "../image/dive.jpg"
 
 function Signup(){
     const [username, setUsername] = useState("");
@@ -39,9 +40,9 @@ function Signup(){
                 password,
                 avatar,
                 age, 
-                countryFrom,
+                country_from: countryFrom,
                 disclaimer,
-                diverCertLevel
+                diver_cert_level: diverCertLevel
             }),
         })
         .then((r) => {
@@ -56,6 +57,14 @@ function Signup(){
 
     return (
         <div className="bg-[url('https://user-images.githubusercontent.com/106715328/192161678-2717f82a-fc84-4eaa-9691-74793a92d5c7.jpg')] min-h-screen w-full bg-cover bg-center p-20">
+            <Navbar.Brand>
+                <Link to="/">
+                    <img
+                        src={dive}
+                        className="mr-3 h-6 sm:h-20 rounded-lg m-4"
+                        alt="Wanderlust Logo" />
+                </Link>
+            </Navbar.Brand>
             <div className="p-5 mx-20 my-80 mb-0 border-2 border-black bg-white">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div>
@@ -166,7 +175,7 @@ function Signup(){
                         <TextInput
                             id="diverCertLevel"
                             type="text"
-                            value={countryFrom}
+                            value={diverCertLevel}
                             onChange={(e) => setDiverCertLevel(e.target.value)}
                             placeholder="Enter your diver certification level..."
                             required={true} />
@@ -174,12 +183,15 @@ function Signup(){
                     <div className="flex items-center gap-2">
                         <Checkbox 
                         id="disclaimer" 
-                        onChange={(e) => setDisclaimer(e.target.value)}
+                        onChange={() => setDisclaimer(true)}
                         value={disclaimer}
                         required={true}
                         />
                             <>
-                                <Button onClick={toggleModal}>
+                                <Label>
+                                    I agree to the SPG: 
+                                </Label>
+                                <Button onClick={toggleModal} gradientDuoTone="cyanToBlue" pill={true}>
                                     User Agreement
                                 </Button>
                                 <Modal
@@ -192,10 +204,10 @@ function Signup(){
                                     <Modal.Body>
                                     <div className="space-y-6">
                                         <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                                        Dive at your own risk. Scuba Pocket Guide (SPG) is not liable for any injury, damages, or death caused by/from scuba dive sites recommendations, wildlife present at recommended websites, gear recommendations at dive sites, and/or any information presented on this site. Diver is  solely responsible for consulting with local dive shops (at the location of diving) to get more specific recommendations for dive conditions, local wildlife, gear, weather conditions, and any information pertaining to travel and scuba diving. This website/web application is meant to be a source of information. Diver/user is responsible for their own safety and agrees not to hold SPG and its affiliates liable for any injury, loss of property, loss of limb, displeasure with recommendations, death, or any unforeseen circumstances related to this website/web application. 
                                         </p>
                                         <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                                        I, the user/diver, agree that I understand this agreement and that myself/my family/anyone related to me will not hold SPG liable for the previously mentioned circumstances. I also affirm that I am 18 years or older and can legally sign a contract within the United States of America. By selecting the agreement checkbox, I am greeing to these terms and conditions. 
                                         </p>
                                     </div>
                                     </Modal.Body>

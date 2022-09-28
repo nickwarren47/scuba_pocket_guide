@@ -18,6 +18,6 @@ class DiversController < ApplicationController
     private 
 
     def diver_params 
-        params.permit(:name, :country_from, :diver_cert_level, :age, :disclaimer, :email, :password_digest, :avatar)
+        params.permit(:name, :username, :country_from, :diver_cert_level, :age, :disclaimer, :email, :password, :avatar)
     end
 end

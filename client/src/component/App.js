@@ -6,8 +6,10 @@ import Signup from './Signup';
 import Login from './Login';
 import DiveSites from './DiveSites';
 import DiveLog from './DiveLog';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DiveSiteCountry from './DiveSiteCountry';
+import IndividualDiveSite from './IndividualDiveSite';
+import AuthProvider from './AuthProvider';
 
 function App() {
 
@@ -36,18 +38,21 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <NavBar user={user} onLogout={handleLogout}/>
-        <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/about' element={<AboutApp />} />
-          <Route path='/signup' element={<Signup onLogin={setUser} />} /> 
-          {user ? (<h2> Welcome, {user.username}!</h2>) : <Route path='/login' element={<Login />} />}
-          <Route path='/divesites' element={<DiveSites diveSites={diveSites} />} />
-          <Route path='/divesites/:id' element={<DiveSiteCountry diveSites={diveSites}/>} />
-          <Route path='/divelog' element={<DiveLog />} />
-        </Routes>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <NavBar user={user} onLogout={handleLogout}/>
+          <Routes>
+            <Route path='/' element={<Homepage />} />
+            <Route path='/about' element={<AboutApp />} />
+            <Route path='/signup' element={<Signup onLogin={setUser} />} /> 
+            <Route path='/login' element={<Login />} />
+            <Route path='/divesites' element={<DiveSites diveSites={diveSites} />} />
+            <Route path='/divesites_country' element={<DiveSiteCountry diveSites={diveSites}/>} />
+            <Route path='/divesites/:id' element={<IndividualDiveSite diveSites={diveSites}/>} />
+            <Route path='/divelog' element={<DiveLog />} />
+          </Routes>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

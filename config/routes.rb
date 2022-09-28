@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :animals, only: [:index, :show]
   resources :divers
 
-  get "/me", to: "diver#show"
-  post "/signup", to: "diver#create"
+  get "/me", to: "divers#show"
+  post "/signup", to: "divers#create"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 

@@ -17,8 +17,6 @@ d5 = Diver.create(name: "Gorn", username: "Liz@rd", country_from: "China", diver
 d6 = Diver.create(name: "Horse", username: "N3h", country_from: "Tanzania", diver_cert_level: "Open Water", age: 22, disclaimer: true, email: "hello@gmail.com", password: "1234567", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
 d7 = Diver.create(name: "Rachel", username: "Rachel_admin", country_from: "USA", diver_cert_level: "Open Water", age: 29, disclaimer: true, email: "rachel@gmail.com", password: "P3ngu1n$", avatar: Faker::Avatar.image(size: "50x50", format: 'png'))
 
-
-
 puts "Creating animals..."
 a1 = Animal.create(name: "Queen Triggerfish", species_name: "Balistes vetula" , size: 45, image_url: "https://user-images.githubusercontent.com/106715328/191372019-f39361c9-097f-4ccb-982b-6a6b0a7053a7.jpg", dangerous: true, description: "A tropical fish that comes in a variety of colors. Commonly found with a large, venemous barb.")
 a2 = Animal.create(name: "French Angelfish", species_name: "Pomacanthus paru", size: 25, image_url: "https://user-images.githubusercontent.com/106715328/191371334-34bbb29e-1629-4ead-b970-b201cb4bfa1d.jpg", dangerous: false, description: "A tropical fish with black and yellow stripes.")
@@ -98,6 +96,8 @@ a74 = Animal.create(name: "Scalloped Hammerhead Shark", species_name: "Sphyrna l
 a75 = Animal.create(name: "Ballyhoo", species_name: "Hemiramphus brasiliensis" , size: 35, image_url: "https://user-images.githubusercontent.com/106715328/191829362-19cd2729-e4ca-4ffd-950c-7b99d925f8b8.jpg", dangerous: false, description: "Fish with a very long, needle like beak.")
 a76 = Animal.create(name: "Mahi-mahi", species_name: "Coryphaena hippurus" , size: 213, image_url: "https://user-images.githubusercontent.com/106715328/191635731-f2ad1afa-b1ca-4a61-9856-15a711115879.jpg", dangerous: false, description: "A very large fish with a long dorsal fin that can expand up and down. Mahi-mahi also have a yellowish-green color.")
 a77 = Animal.create(name: "Reef Stonefish", species_name: "Synanceja Verrucosa" , size: 35, image_url: "https://user-images.githubusercontent.com/106715328/191872007-7d87d98e-8b6e-4c1b-957e-d6d58058c5f1.jpg", dangerous: true, description: "This is the most venemous fish in the ocean. It is well camofluged and injects venom through the spines on its back. Do not touch and give plenty of space if you see one.")
+a78 = Animal.create(name: "Gert Gallant", species_name: "Gerticus galantis" , size: 5, image_url: "https://user-images.githubusercontent.com/106715328/191872007-7d87d98e-8b6e-4c1b-957e-d6d58058c5f1.jpg", dangerous: true, description: "This is the most venemous fish in the ocean. It is well camofluged and injects venom through the spines on its back. Do not touch and give plenty of space if you see one.")
+
 
 
 puts "Creating dive sites..."
@@ -133,7 +133,6 @@ ds29 = DiveSite.create(name: "Rose Hall Reef", country: "Jamaica", rating: 4, av
 ds30 = DiveSite.create(name: "Spanish Anchor", country: "Jamaica", rating: 5, avg_depth: 22, diver_skill_level: "Advanced", image_url: "https://user-images.githubusercontent.com/106715328/191599360-c014f0e1-89f7-4906-bbde-853689dfeca4.jpg", country_flag:"https://user-images.githubusercontent.com/106715328/191592841-74a768ab-997f-45b4-89f6-fc4365220318.jpg", description: "A single tank dive, to this site is not enough for hard core diver, there are so much going on, a busy home for parrot fish, sergeant major and grunt. The formation of the sheet carol created some swim through. Wall with cavern and also consists of 2 old Spanish anchors, which are ideal for advanced divers.")
 ds31 = DiveSite.create(name: "Seargent Major", country: "Jamaica", rating: 3, avg_depth: 12, diver_skill_level: "Novice", image_url: "https://user-images.githubusercontent.com/106715328/191599361-7592ba0b-2c88-4d8a-8a36-1933475af2ad.jpg", country_flag:"https://user-images.githubusercontent.com/106715328/191592841-74a768ab-997f-45b4-89f6-fc4365220318.jpg", description: "This site is a good place for shallow divers and has many seargent major fish.")
 ds32 = DiveSite.create(name: "Airport Reef", country: "Jamaica", rating: 4, avg_depth: 12, diver_skill_level: "Novice", image_url: "https://user-images.githubusercontent.com/106715328/191599362-e843b793-e974-4e9e-bacc-096cdd8a1257.jpg", country_flag:"https://user-images.githubusercontent.com/106715328/191592841-74a768ab-997f-45b4-89f6-fc4365220318.jpg", description: "Swim through caverns. This reef is for exploration divers. And some things to see are Southern Stingrays, Mutton Snappers, Basket and Flying Gurnard.")
-
 
 puts "Creating Dive Site-Animals..."
 dsa1 = DiveSiteAnimal.create(dive_site: ds1, animal: a1)
@@ -391,13 +390,6 @@ dsa257 = DiveSiteAnimal.create(dive_site: ds24, animal: a43)
 dsa258 = DiveSiteAnimal.create(dive_site: ds24, animal: a41)
 dsa259 = DiveSiteAnimal.create(dive_site: ds24, animal: a42)
 
-
-
-
-
-
-
 dl1 = DiveLog.create(dive_number: 1, dive_site_name: "Victory Reef", dive_site_country: "Bahamas", depth_achieved: 12, date: DateTime.now(), time_in: Time.now, time_out: Time.now + 7200, starting_psi: 1300, ending_psi: 500, air_temp: 27, surface_temp: 24, bottom_temp: 22, fresh_or_salt_water: true, shore_or_boat: true, training_dive: false, diver_id: d2.id, dive_site_id: ds21.id)
-
 
 puts "Finished Seeding!"

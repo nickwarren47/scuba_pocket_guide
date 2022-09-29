@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import DiveSiteCountry from './DiveSiteCountry';
 import dive from '../image/dive.jpg';
+import { Footer } from "flowbite-react"
+
 
 function DiveSites({ diveSites, handleFlagClick }){
 
@@ -31,21 +33,48 @@ function DiveSites({ diveSites, handleFlagClick }){
     ))
 
     return(
-        <div className="bg-[url('https://www.toptal.com/designers/subtlepatterns/uploads/just-waves.png')]">
-            <div className="flex items-center justify-center scale-100 p-5">
-                <img className="rounded-lg border-4 border-black" src={dive} alt="logo" />
+        <>
+            <div className="bg-[url('https://www.toptal.com/designers/subtlepatterns/uploads/just-waves.png')]">
+                <div className="flex items-center justify-center scale-100 p-5">
+                    <img className="rounded-lg border-4 border-black" src={dive} alt="logo" />
+                </div>
+                <div className="flex items-center justify-center">
+                <input
+                    className= "ml-5"
+                    onChange={handleSearch}
+                    type="text"
+                    placeholder="Search Destinations"/>
+                </div>
+                <div className="grid grid-cols-5 gap-4 pt-6 pl-28 pr-32 justify-center">
+                {diveSiteList}
+                </div>
             </div>
-            <div className="flex items-center justify-center">
-            <input
-                className= "ml-5"
-                onChange={handleSearch}
-                type="text"
-                placeholder="Search Destinations"/>
-            </div>
-            <div className="grid grid-cols-5 gap-4 pt-6 pl-28 pr-32 justify-center">
-            {diveSiteList}
-            </div>
-     </div>
+            <Footer container={true}>
+                <div className="w-full text-center">
+                    <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
+                    <Footer.Brand
+                        src={dive}
+                        alt="SPG Logo"
+                        name="SPG"
+                    />
+                    <Footer.LinkGroup>
+                        <Footer.Link href="#">
+                        About
+                        </Footer.Link>
+                        <Footer.Link href="#">
+                        Contact
+                        </Footer.Link>
+                    </Footer.LinkGroup>
+                    </div>
+                    <Footer.Divider />
+                    <Footer.Copyright
+                    href="#"
+                    by="Scuba Pocket Guide™"
+                    year={2022}
+                    />
+                </div>
+            </Footer>
+        </>
     )
 }
 

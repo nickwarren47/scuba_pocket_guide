@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Card } from "flowbite-react"
 
+
 function DiveSiteCountry( {id, country, name, country_flag}){
 
     let navigate = useNavigate()
@@ -11,6 +12,7 @@ function DiveSiteCountry( {id, country, name, country_flag}){
     }
 
     return(
+        <>
         <div> 
             <div className="max-w-sm">
                 <Card
@@ -26,6 +28,8 @@ function DiveSiteCountry( {id, country, name, country_flag}){
                 </Card>
             </div>
         </div>
+        </>
+        
     )
 
 }

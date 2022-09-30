@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import DiveSiteCountry from './DiveSiteCountry';
-import dive from '../image/dive.jpg';
+import spg from '../image/spg.gif';
 import { Footer } from "flowbite-react"
 
 
@@ -34,9 +34,9 @@ function DiveSites({ diveSites, handleFlagClick }){
 
     return(
         <>
-            <div className="bg-[url('https://www.toptal.com/designers/subtlepatterns/uploads/just-waves.png')]">
+            <div className="bg-[url('https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg')] min-h-screen w-full bg-cover bg-center p-20">
                 <div className="flex items-center justify-center scale-100 p-5">
-                    <img className="rounded-lg border-4 border-black" src={dive} alt="logo" />
+                    <img className="rounded-lg border-4 border-blue-800" src={spg} alt="logo" />
                 </div>
                 <div className="flex items-center justify-center">
                 <input
@@ -53,7 +53,7 @@ function DiveSites({ diveSites, handleFlagClick }){
                 <div className="w-full text-center">
                     <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
                     <Footer.Brand
-                        src={dive}
+                        src={spg}
                         alt="SPG Logo"
                         name="SPG"
                     />

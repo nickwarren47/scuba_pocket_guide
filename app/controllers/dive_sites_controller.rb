@@ -1,5 +1,5 @@
 class DiveSitesController < ApplicationController
-    skip_before_action :authorize, only: [:index, :show]
+    skip_before_action :authorize, only: [:index, :show, :showAnimals]
     wrap_parameters format: []
 
 
@@ -11,5 +11,10 @@ class DiveSitesController < ApplicationController
     def show 
         dive_site = DiveSite.find(params[:id])
         render json: dive_site, status: :ok 
+    end
+
+    def showAnimals 
+        dive_site_animals = DiveSite.find(params[:id])
+        render json: dive_site_animals.animals, status: :ok
     end
 end

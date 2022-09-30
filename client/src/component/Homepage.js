@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
-import dive from "../image/dive.jpg";
+import spg from "../image/spg.gif";
 
 
 function Homepage(){
@@ -9,12 +9,12 @@ const { user } = useContext(AuthContext)
 
 return(
     <div id='homepage'>
-        <div className='bg-[url(https://user-images.githubusercontent.com/106715328/187081415-68806828-ff2e-4b00-9c47-28414a0c9016.jpg)] min-h-screen w-full bg-cover bg-center p-20'>
+        <div className='bg-[url(https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg)] min-h-screen w-full bg-cover bg-center p-20'>
             <div className="flex items-center justify-center scale-125 p-5">
-                <img src={dive} alt="logo" />
+                <img src={spg} alt="logo" />
             </div>
-            <h1 className='text-cyan-200 text-7xl font-bold mt-12 text-center p-6'>Welcome to Scuba Pocket Guide!</h1>
-            <h2 className="text-cyan-200 text-5xl font-bold mt-5 text-center pt-0 pb-6"> Your one-stop shop for aquatic wildlife, dive sites, and so much more</h2>
+            <h1 className='text-blue-700 text-7xl font-bold mt-12 text-center p-6'>Welcome to Scuba Pocket Guide!</h1>
+            <h2 className="text-blue-700 text-5xl font-bold mt-5 text-center pt-0 pb-6"> Your one-stop shop for aquatic wildlife, dive sites, and so much more</h2>
             <div className="flex items-center justify-center mt-7 space-x-7">
                 <TailwindcssButton>
                     <Link to="/divesites"> Let's Get Diving! </Link>

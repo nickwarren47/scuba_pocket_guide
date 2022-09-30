@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { Navbar, Dropdown, Avatar, Button } from "flowbite-react"
 import { AuthContext } from "../Context/AuthContext"
 import { useLocation } from 'react-router-dom';
-import dive from '../image/dive.jpg';
+import spg from '../image/spg.gif';
 
 function NavBar() {
     const navigate = useNavigate();
@@ -35,7 +35,7 @@ function NavBar() {
                     <Navbar.Brand>
                         <Link to="/">
                             <img
-                                src={dive}
+                                src={spg}
                                 className="mr-3 h-6 sm:h-20"
                                 alt="SPG Logo" />
                         </Link>

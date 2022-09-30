@@ -38,6 +38,7 @@ function NavBar() {
                                 src={spg}
                                 className="mr-3 h-6 sm:h-20"
                                 alt="SPG Logo" />
+                            <h1 className="text-2xl font-bold text-blue-800 pl-4">SPG</h1>
                         </Link>
                     </Navbar.Brand>
                     <div className="flex md:order-2">
@@ -83,7 +84,12 @@ function NavBar() {
 
                         <Navbar.Link
                             active={location.pathname === "/about"}>
-                            <Link to="/about"> About App </Link>
+                            <Link to="/about"> About </Link>
+                        </Navbar.Link>
+
+                        <Navbar.Link
+                            active={location.pathname === "/environment"}>
+                            <Link to="/environment"> Conservation </Link>
                         </Navbar.Link>
 
                     </Navbar.Collapse>

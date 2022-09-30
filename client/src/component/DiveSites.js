@@ -51,7 +51,7 @@ function DiveSites({ diveSites, handleFlagClick }){
             </div>
             <Footer container={true}>
                 <div className="w-full text-center">
-                    <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
+                    <div className="w-full justify-between sm:flex sm:items-center sm:justify-between"> 
                     <Footer.Brand
                         src={spg}
                         alt="SPG Logo"

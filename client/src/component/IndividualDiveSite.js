@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
-import { Card } from 'flowbite-react';
 import Animals from './Animals'
 
 
@@ -28,7 +27,7 @@ function IndividualDiveSite(){
       const animalsPerDiveSite = animals.map((animal) => (
          <Animals 
             name = {animal.name}
-            species = {animal.species}
+            species_name = {animal.species_name}
             size = {animal.size}
             description = {animal.description}
             image = {animal.image_url}
@@ -41,21 +40,23 @@ function IndividualDiveSite(){
            {diveSite ? (
               <div className='review-section bg-[url("https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg")] min-h-screen w-full bg-cover bg-center p-20'>
                  <div className = "flex justify-center items-center">
-                    <div className="w-3/4 review-card m-2">
+                    <div className="w-2/5 review-card m-5">
                     <div className="pt-6 pr-6 pl-6 pb-40 min-w-lg bg-slate-200 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-6 ml-auto mr-auto h-3/4">
+                        <h1 className="mb-2 text-center text-6xl font-semibold tracking-tight text-gray-900 dark:text-white">{diveSite.name} ({diveSite.country})</h1>
+                          <br/>
                         <div>
-                           <img src={diveSite.image_url} alt="" className="h-2/6 w-4/5 pl-20 "/>
+                           <img src={diveSite.image_url} alt="" className="h-1/3 w-3/5 container mx-auto rounded-lg"/>
                         </div>
                            <br/>
-                           <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"> {diveSite.name} ({diveSite.country})</h5>
-                           <p className="font-medium text-black mb-3 dark:text-gray-400" >Dive Site Rating: {diveSite.rating} out of 5</p>
-                           <p className="font-medium text-black mb-3 dark:text-gray-400" >Dive Site Average Depth: {diveSite.avg_depth}m</p>
-                           <p className="font-medium text-black mb-3 dark:text-gray-400" >Diver Skill Level: {diveSite.diver_skill_level}</p>
-                           <p className="font-medium text-black mb-3 dark:text-gray-400" >Dive Site Description: {diveSite.description}</p>
+                           <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Dive Site Rating: {diveSite.rating} out of 5</h1>
+                           <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Dive Site Average Depth: {diveSite.avg_depth}m</h1>
+                           <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Diver Skill Level: {diveSite.diver_skill_level}</h1>
+                           <h1 className="text-xl text-black mb-3 dark:text-gray-400" >Dive Site Description: {diveSite.description}</h1>
                         </div>
 
                     </div>
                  </div>
+
                  <div className="grid grid-cols-4 gap-6 pt-2 pl-28 pr-32 justify-center">
                      {animalsPerDiveSite}
                 </div>

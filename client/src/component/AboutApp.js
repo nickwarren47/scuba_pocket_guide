@@ -60,18 +60,29 @@ function AboutApp(){
                         About the App
                     </h5>
                     <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">
-                    Welcome to Scuba Pocket Guide!
+                    Scuba Pocket Guide welcomes you!
                     The app made by a diver for divers. The idea for the app was built from the necessity to have multiple scuba diving data available to a user all at once. Unlike our competition, 
                     we offer various different data to give the user the ability to have the best diving experience possible. We hope this app will give fellow divers a better diving experience and allow
                     everyone the enjoyment of the ocean's wonders.  
                     </p>
-                    <p className="flex flex-wrap"> The creator of this app has travelled all over the world getting to experience the beauty that our oceans have to offer. That being said, this app's mission (in addition to providing the best diving experiences possible) is to bring awareness
+                    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Ocean Conservation
+                    </h5>
+                    <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left"> Protecting our oceans is vital! The creator of this app has travelled all over the world getting to experience the beauty that our oceans have to offer. That being said, this app's mission (in addition to providing the best diving experiences possible) is to bring awareness
                         to environmental issues that our oceans are experiencing on a daily basis. Whether it be from ocean pollution to coral bleaching, every incident is harming our oceans and they need help. Please consider going to our "Environmental Conservation" tab to 
-                        see how you can help to keep our oceans alive and beautiful for future generations.
+                        see how you can help to keep our oceans alive and beautiful for future generations. It may not seem like it but even picking up a small piece of trash on the beach or while diving can have a monumental impact in preventing microplastics from entering into the 
+                        ocean. Additionally, coral reefs around the world are also facing an invasive species explosion. Fish species like Lionfish populations are exploding and are disrupting ecosystems. If you see any Lionfish, please report it to the local Fish and Wildlife department/officer. 
+                        The more we can understand where these invasive animals are living, the more we can do to stop them.  
                     </p>
+                    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        About the App Developer
+                    </h5>
                     <img src={nick} alt="" className="h-4/5 w-64 flex flex-wrap"/>
-                        <h3 className="text-left">I would like to give a big thank you to my parents, family, friends, and my wife who supported me throughout my 
-                        Software Engineering journey. A big thank you to you all and a thank you to you for visiting the site! -Nick</h3>
+                    <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">
+                        Generally, I prefer to let my work speak for itself but I know I couldn't have done this on my own. I would like to give a big thank you to my parents, family, friends, and my wife who supported me throughout my 
+                        Software Engineering journey. I started this Software Engineering journey by becoming a student at Flatiron School. There I studied JavaScript, Ruby, React, Rails, Semantic UI, Sinatra, Tailwind CSS, HTML, and CSS. This project is a testament to the wonderful education I 
+                        recieved from the staff at Flatiron School and the support I have received from those around me. I would also like to thank you for visiting the site! -Nick
+                    </p>
                 </Card>
             </div>
             </div>

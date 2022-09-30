@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 import DiveSiteCountry from './DiveSiteCountry';
 import IndividualDiveSite from './IndividualDiveSite';
 import AuthProvider from './AuthProvider';
+import EnvironmentalConservation from './EnvironmentalConservation'
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
             <Route path='/divesites_country' element={<DiveSiteCountry diveSites={diveSites}/>} />
             <Route path='/divesites/:id' element={<IndividualDiveSite diveSites={diveSites}/>} />
             <Route path='/divelog' element={<DiveLog />} />
+            <Route path="/environment" element={<EnvironmentalConservation />}/>
           </Routes>
         </Router>
       </AuthProvider>

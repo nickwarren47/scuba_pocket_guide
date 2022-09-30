@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import Signup from './Signup';
 import Login from './Login';
 import DiveSites from './DiveSites';
-import DiveLog from './DiveLog';
+import DiveLogForm from './DiveLogForm';
 import React, { useEffect, useState } from 'react';
 import DiveSiteCountry from './DiveSiteCountry';
 import IndividualDiveSite from './IndividualDiveSite';
@@ -16,12 +16,19 @@ function App() {
 
   const [diveSites, setDiveSites] = useState([])
   const [user, setUser] = useState(null)
+  const [diveLogs, setDiveLogs] = useState([])
 
   useEffect(() => {
     fetch("/dive_sites") 
       .then(data => data.json())
       .then(data => setDiveSites(data))
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    fetch("/dive_logs") 
+      .then(data => data.json())
+      .then(data => setDiveLogs(data))
+  }, []);
 
 
   useEffect(() => {
@@ -50,7 +57,7 @@ function App() {
             <Route path='/divesites' element={<DiveSites diveSites={diveSites} />} />
             <Route path='/divesites_country' element={<DiveSiteCountry diveSites={diveSites}/>} />
             <Route path='/divesites/:id' element={<IndividualDiveSite diveSites={diveSites}/>} />
-            <Route path='/divelog' element={<DiveLog />} />
+            <Route path='/divelogform' element={<DiveLogForm diveLogs={diveLogs}/>} />
             <Route path="/environment" element={<EnvironmentalConservation />}/>
           </Routes>
         </Router>

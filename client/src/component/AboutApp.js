@@ -5,12 +5,12 @@ function AboutApp(){
 
     return(
         <div id='aboutpage'>
-            <div className='bg-[url(https://user-images.githubusercontent.com/106715328/193150789-48bd5983-b7c6-4527-b372-29b9f831fe59.jpg)] min-h-screen w-full bg-cover bg-center p-20'>
+            <div className='bg-[url(https://user-images.githubusercontent.com/106715328/193150789-48bd5983-b7c6-4527-b372-29b9f831fe59.jpg)] min-h-screen w-full bg-cover bg-center p-7'>
+            <div>
+                    <img src="https://user-images.githubusercontent.com/106715328/193474681-1b73c208-3102-4e93-bfc0-9222d40d6de9.jpg" alt="" className="h-36 w-1/3 container mx-auto rounded-2xl m-6 border-4 border-blue-800"/>
+            </div>
             <div className="h-80 w-4/12 container mx-auto">
                 <Carousel slideInterval={5000}>
-                    
-                    
-                    
                     <img
                         src="https://user-images.githubusercontent.com/106715328/193161729-68e3835e-9634-43ef-97a2-9f325516ed10.jpg"
                         alt="..."
@@ -80,8 +80,9 @@ function AboutApp(){
                     <div>
                         <img src={nick} alt="" className="float-right h-4/5 w-64"/>
                         <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">
-                            Generally, I prefer to let my work speak for itself but I know I couldn't have done this on my own. I would like to give a big thank you to my parents, family, friends, and my wife who supported me throughout my 
-                            Software Engineering journey. I started this Software Engineering journey by becoming a student at Flatiron School. There I studied JavaScript, Ruby, React, Rails, Semantic UI, Sinatra, Tailwind CSS, HTML, and CSS. This project is a testament to the wonderful education I 
+                            Generally, I prefer to let my work speak for itself but I know I couldn't have done this on my own. I would like to give a big thank you to my parents, family, friends, and especially my wife who supported me throughout my 
+                            Software Engineering journey. I started this Software Engineering journey by becoming a student at Flatiron School. There I studied JavaScript, Ruby, React, Rails, Semantic UI, Sinatra, Tailwind CSS, HTML, and CSS. 
+                            I'm an avid scuba diver in my free time, I also mountain bike, rock hunt, hike, woodwork, weld, and enjoy playing with my dog. Basically, I enjoy all things outdoors and the ability to work with my hands. This project is a testament to the wonderful education I 
                             recieved from the staff at Flatiron School and the support I have received from those around me. I would also like to thank you for visiting the site! -Nick
                         </p>
                     </div>

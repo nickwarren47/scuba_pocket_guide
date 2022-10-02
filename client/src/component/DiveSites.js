@@ -34,10 +34,13 @@ function DiveSites({ diveSites, handleFlagClick }){
 
     return(
         <>
-            <div className="bg-[url('https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg')] min-h-screen w-full bg-cover bg-center p-20">
-                <div className="flex items-center justify-center scale-100 p-5">
-                    <img className="rounded-lg border-4 border-blue-800" src={spg} alt="logo" />
+            <div className="bg-[url('https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg')] min-h-screen w-full bg-cover bg-center p-7">
+                <div>
+                    <img src="https://user-images.githubusercontent.com/106715328/193474676-c98a71b7-c809-437f-84c1-f5d670273dcb.jpg" alt="" className="h-36 w-1/3 container mx-auto rounded-2xl m-6 border-4 border-blue-800"/>
                 </div>
+                {/* <div className="flex items-center justify-center scale-100 p-5">
+                    <img className="rounded-lg border-4 border-blue-800" src={spg} alt="logo" />
+                </div> */}
                 <div className="flex items-center justify-center">
                 <input
                     className= "ml-5"

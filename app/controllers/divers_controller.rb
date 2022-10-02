@@ -1,5 +1,5 @@
 class DiversController < ApplicationController
-    skip_before_action :authorize, only: [:index, :show, :create]
+    skip_before_action :authorize, only: [:index, :show, :create, :showDiverLogs, :showDiverID]
 
     def index 
         render json: Diver.all 
@@ -8,6 +8,16 @@ class DiversController < ApplicationController
     def show 
         render json: @current_diver
     end 
+
+    def showDiverID
+        diver = Diver.find(params[:id])
+        render json: diver, status: :ok
+    end
+
+    def showDiverLogs
+        diver_logs = Diver.find(params[:id])
+        render json: diver_logs.dive_logs, status: :ok
+    end
 
     def create 
         diver = Diver.create!(diver_params)

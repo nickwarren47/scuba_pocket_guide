@@ -78,6 +78,11 @@ function NavBar() {
                         </Navbar.Link>
 
                         <Navbar.Link
+                            active={location.pathname === "/hand_signals"}>
+                            <Link to="/hand_signals"> Hand Signals </Link>
+                        </Navbar.Link>
+
+                        <Navbar.Link
                             active={location.pathname === "/about"}>
                             <Link to="/about"> About </Link>
                         </Navbar.Link>
@@ -95,6 +100,11 @@ function NavBar() {
                         <Navbar.Link
                             active={location.pathname === "/divelog"}>
                             {user ? (<Link to="/divelog"> Dive Logs </Link>) : null}
+                        </Navbar.Link>
+
+                        <Navbar.Link
+                            active={location.pathname === "/diverprofiles"}>
+                            {user ? (<Link to="/diverprofiles"> Diver Profiles </Link>) : null}
                         </Navbar.Link>
 
                     </Navbar.Collapse>

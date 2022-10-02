@@ -11,7 +11,9 @@ import DiveSiteCountry from './DiveSiteCountry';
 import IndividualDiveSite from './IndividualDiveSite';
 import AuthProvider from './AuthProvider';
 import EnvironmentalConservation from './EnvironmentalConservation';
-import DiveLogs from './DiveLogs';
+import DiveLogCards from './DiveLogCards';
+import DiverProfile from './DiverProfile';
+import HandSignals from './HandSignals';
 
 function App() {
 
@@ -59,8 +61,10 @@ function App() {
             <Route path='/divesites_country' element={<DiveSiteCountry diveSites={diveSites}/>} />
             <Route path='/divesites/:id' element={<IndividualDiveSite diveSites={diveSites}/>} />
             <Route path='/divelogform' element={<DiveLogForm diveLogs={diveLogs}/>} />
-            <Route path='/divelogs' element={<DiveLogs />} />
+            <Route path='/diverprofile' element={<DiverProfile />} />
+            <Route path='/divelogcards' element={<DiveLogCards />} />
             <Route path="/environment" element={<EnvironmentalConservation />}/>
+            <Route path="/hand_signals" element={<HandSignals />}/>
           </Routes>
         </Router>
       </AuthProvider>

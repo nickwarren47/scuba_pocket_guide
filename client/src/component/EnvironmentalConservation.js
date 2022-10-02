@@ -5,9 +5,13 @@ function EnvironmentalConservation(){
 
     return (
         <div>
-            <div className="w-5/12 container mx-auto">
+            <div className='bg-[url("https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg")] min-h-screen w-full bg-cover bg-center p-7'>
+            <div>
+                    <img src="https://user-images.githubusercontent.com/106715328/193474678-16fe32c3-9bfa-402e-99d5-37b857b2a5ff.jpg" alt="" className="h-36 w-2/5 container mx-auto rounded-2xl m-4 border-4 border-blue-800"/>
+            </div>
+            <div className="w-5/12 container mx-auto my-16">
                 <Card>
-                    <div className="bg-slate-300 rounded-xl p-2">
+                    <div className="bg-slate-300 rounded-xl p-6">
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         Ocean Conservation
                     </h5>
@@ -21,10 +25,10 @@ function EnvironmentalConservation(){
                         Please Consider Donating to These Environmental Protection/Restoration Organizations:
                     </h5>
                     <div className="grid grid-cols-4">
-                        <img src="https://user-images.githubusercontent.com/106715328/193433912-d2d65fa1-be11-4a1a-82d5-536cd8f6b3a8.jpg" alt="" className="h-7/8 w-7/8 pr-2 rounded-2xl"/>
-                        <img src="https://user-images.githubusercontent.com/106715328/193433960-79ce7998-2429-4622-91a8-36c822dc76b2.jpg" alt="" className="h-7/8 w-7/8 pr-2 rounded-2xl"/>
-                        <img src="https://user-images.githubusercontent.com/106715328/193434030-ed042152-4d78-4c5a-a0dc-7cc100a4c4c7.jpg" alt="" className="h-7/8 w-7/8 pr-2 rounded-2xl"/>
-                        <img src="https://user-images.githubusercontent.com/106715328/193434032-a69474ed-636a-4774-b795-41d208721bec.jpg" alt="" className="h-7/8 w-7/8 pr-2 rounded-2xl"/>
+                        <img src="https://user-images.githubusercontent.com/106715328/193470849-814b9de9-bd4e-4fbd-a9e9-08ac9b66317a.jpg" alt="" className="h-5/6 w-6/7 m-2 rounded-2xl"/>
+                        <img src="https://user-images.githubusercontent.com/106715328/193470850-a97867e7-6c7d-4583-a06e-2e430884b647.jpg" alt="" className="h-5/6 w-6/7 m-2 rounded-2xl"/>
+                        <img src="https://user-images.githubusercontent.com/106715328/193470853-0eafee98-aa58-4f95-9f20-0906edccaeb2.jpg" alt="" className="h-5/6 w-6/7 m-2 rounded-2xl pr-3"/>
+                        <img src="https://user-images.githubusercontent.com/106715328/193470854-20726fb3-3084-44c4-96b6-62291aa34a16.jpg" alt="" className="h-5/6 w-6/7 m-2 rounded-2xl"/>
                     </div>
                     <div>
                     <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">
@@ -35,6 +39,7 @@ function EnvironmentalConservation(){
                 </Card>
             </div>
         </div>
+    </div>
     )
 }
 

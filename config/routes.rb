@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   # Leave this here to help deploy your app later!
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
   get "/dive_sites/:id/animals", to: "dive_sites#showAnimals"
+  get "/divers/:id", to: "divers#showDiverID"
+  get "/divers/:id/dive_logs", to: "divers#showDiverLogs"
 end

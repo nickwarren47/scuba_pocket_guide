@@ -47,9 +47,9 @@ function NavBar() {
                                 <Dropdown
                                     arrowIcon={false}
                                     inline={true}
-                                    label={<Avatar alt="User settings" img={user.avatar} rounded={true} />}>
+                                    label={<Avatar alt="User settings" img={user.avatar} rounded={true} size="lg" />}>
                                     <Dropdown.Header>
-                                        <span className="block text-sm">
+                                        <span className="block text-md">
                                             {user.username}
                                         </span>
                                         <span className="block truncate text-sm font-medium">
@@ -78,11 +78,6 @@ function NavBar() {
                         </Navbar.Link>
 
                         <Navbar.Link
-                            active={location.pathname === "/divelog"}>
-                            {user ? (<Link to="/divelog"> Dive Log Entry </Link>) : null}
-                        </Navbar.Link>
-
-                        <Navbar.Link
                             active={location.pathname === "/about"}>
                             <Link to="/about"> About </Link>
                         </Navbar.Link>
@@ -90,6 +85,16 @@ function NavBar() {
                         <Navbar.Link
                             active={location.pathname === "/environment"}>
                             <Link to="/environment"> Conservation </Link>
+                        </Navbar.Link>
+
+                        <Navbar.Link
+                            active={location.pathname === "/divelogform"}>
+                            {user ? (<Link to="/divelogform"> Dive Log Entry </Link>) : null}
+                        </Navbar.Link>
+
+                        <Navbar.Link
+                            active={location.pathname === "/divelog"}>
+                            {user ? (<Link to="/divelog"> Dive Logs </Link>) : null}
                         </Navbar.Link>
 
                     </Navbar.Collapse>

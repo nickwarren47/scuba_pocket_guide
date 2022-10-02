@@ -77,12 +77,14 @@ function AboutApp(){
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         About the App Developer
                     </h5>
-                    <img src={nick} alt="" className="h-4/5 w-64 flex flex-wrap"/>
-                    <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">
-                        Generally, I prefer to let my work speak for itself but I know I couldn't have done this on my own. I would like to give a big thank you to my parents, family, friends, and my wife who supported me throughout my 
-                        Software Engineering journey. I started this Software Engineering journey by becoming a student at Flatiron School. There I studied JavaScript, Ruby, React, Rails, Semantic UI, Sinatra, Tailwind CSS, HTML, and CSS. This project is a testament to the wonderful education I 
-                        recieved from the staff at Flatiron School and the support I have received from those around me. I would also like to thank you for visiting the site! -Nick
-                    </p>
+                    <div>
+                        <img src={nick} alt="" className="float-right h-4/5 w-64"/>
+                        <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">
+                            Generally, I prefer to let my work speak for itself but I know I couldn't have done this on my own. I would like to give a big thank you to my parents, family, friends, and my wife who supported me throughout my 
+                            Software Engineering journey. I started this Software Engineering journey by becoming a student at Flatiron School. There I studied JavaScript, Ruby, React, Rails, Semantic UI, Sinatra, Tailwind CSS, HTML, and CSS. This project is a testament to the wonderful education I 
+                            recieved from the staff at Flatiron School and the support I have received from those around me. I would also like to thank you for visiting the site! -Nick
+                        </p>
+                    </div>
                 </Card>
             </div>
             </div>

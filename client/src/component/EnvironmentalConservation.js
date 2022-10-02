@@ -30,11 +30,11 @@ function EnvironmentalConservation(){
                         <img src="https://user-images.githubusercontent.com/106715328/193470853-0eafee98-aa58-4f95-9f20-0906edccaeb2.jpg" alt="" className="h-5/6 w-6/7 m-2 rounded-2xl pr-3"/>
                         <img src="https://user-images.githubusercontent.com/106715328/193470854-20726fb3-3084-44c4-96b6-62291aa34a16.jpg" alt="" className="h-5/6 w-6/7 m-2 rounded-2xl"/>
                     </div>
-                    <div>
-                    <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">
+                    {/* <div>
+                        <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left">
                             Each photo is a link to the organizations website. Please feel free to click on each of them to learn more about the organization. 
                         </p>
-                    </div>
+                    </div> */}
                     </div>
                 </Card>
             </div>

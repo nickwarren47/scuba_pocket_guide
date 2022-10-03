@@ -61,7 +61,7 @@ function App() {
             <Route path='/divesites_country' element={<DiveSiteCountry diveSites={diveSites}/>} />
             <Route path='/divesites/:id' element={<IndividualDiveSite diveSites={diveSites}/>} />
             <Route path='/divelogform' element={<DiveLogForm diveLogs={diveLogs}/>} />
-            <Route path='/diverprofile' element={<DiverProfile />} />
+            <Route path='/diver/:id' element={<DiverProfile />} />
             <Route path='/divelogcards' element={<DiveLogCards />} />
             <Route path="/environment" element={<EnvironmentalConservation />}/>
             <Route path="/hand_signals" element={<HandSignals />}/>

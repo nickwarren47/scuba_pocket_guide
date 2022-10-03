@@ -5,11 +5,11 @@ class DiversController < ApplicationController
         render json: Diver.all 
     end 
 
-    def show 
+    def show_current 
         render json: @current_diver
     end 
 
-    def showDiverID
+    def show
         diver = Diver.find(params[:id])
         render json: diver, status: :ok
     end

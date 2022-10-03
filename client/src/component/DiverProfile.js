@@ -1,25 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext} from 'react';
 import { useParams } from "react-router-dom"
 import DiveLogCards from './DiveLogCards';
+import {AuthContext} from '../Context/AuthContext'
 
 function DiverProfile(){
 
+    const auth = useContext(AuthContext)
     const params = useParams();
-    const diverID = parseInt(params.id)
-    const[diver, setDiver] = useState(null)
+    const[diver, setDiver] = useState({})
     const[diveLogs, setDiveLogs] = useState([])
 
+
     useEffect(() => {
-        fetch(`/divers/${diverID}`)
-           .then(data => data.json())
-           .then(data => setDiver(data));
-     }, []);
+        if (auth.user?.id === parseInt(params.id)){
+            setDiver(auth.user)
+        }
+        else {
+            fetch(`/divers/${params.id}`)
+            .then(data => data.json())
+            .then(data => setDiver(data));
+        }
+      }, []);
+
     
-    useEffect(() => {
-        fetch(`/divers/${diverID}/dive_logs`) 
-          .then(data => data.json())
-          .then(data => setDiveLogs(data))
-    }, []);
+    // useEffect(() => {
+    //     fetch(`/divers/${params.id}/dive_logs`) 
+    //       .then(data => data.json())
+    //       .then(data => console.log(data))
+    // }, []);
 
     const diveLogsPerDiver = diveLogs.map((diveLog) => (
         <DiveLogCards 

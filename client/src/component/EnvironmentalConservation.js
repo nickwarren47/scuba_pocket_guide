@@ -21,7 +21,8 @@ function EnvironmentalConservation(){
                     As an avid outdoorsman, I am determined to help preserve our natural ecosystems so that my children will have the ability to experience the awe and wonder that we all do when seeing a thriving reef. I hope my children will be able to see whales, sharks, sting rays, and many more species alive and not only just a mention in a book about extinct species. 
                     Please help me to support the organizations that are working to safeguard the environment. Thank you, Nick. 
                     </p>
-                    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <br/>
+                    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
                         Please Consider Donating to These Environmental Protection/Restoration Organizations:
                     </h5>
                     <div className="grid grid-cols-4">

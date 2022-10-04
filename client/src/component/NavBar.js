@@ -78,6 +78,11 @@ function NavBar() {
                         </Navbar.Link>
 
                         <Navbar.Link
+                            active={location.pathname === "/weather"}>
+                            <Link to="/weather"> Weather </Link>
+                        </Navbar.Link>
+
+                        <Navbar.Link
                             active={location.pathname === "/hand_signals"}>
                             <Link to="/hand_signals"> Hand Signals </Link>
                         </Navbar.Link>

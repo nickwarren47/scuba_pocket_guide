@@ -60,7 +60,7 @@ function DiverProfile(){
                </div>
                   <br/>
                   <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Diver Certification Level: {diver.diver_cert_level}</h1>
-                  <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Diver Age: {diver.age}m</h1>
+                  <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Diver Age: {diver.age}</h1>
                   <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Diver Email: {diver.email}</h1>
                   <h1 className="text-xl text-black mb-3 dark:text-gray-400" >Diver Username: {diver.username}</h1>
                </div>

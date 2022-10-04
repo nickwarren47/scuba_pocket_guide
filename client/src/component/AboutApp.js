@@ -1,7 +1,17 @@
+import React, {useState} from "react"
 import { Card, Carousel } from 'flowbite-react';
 import nick from "../image/nick_scuba.jpg"
+import { Button, Modal} from "flowbite-react";
+
 
 function AboutApp(){
+
+    const [modal, setModal] = useState(false);
+
+    function toggleModal(){
+        setModal(!modal)
+        console.log(modal)
+    }
 
     return(
         <div id='aboutpage'>
@@ -88,6 +98,28 @@ function AboutApp(){
                     </div>
                 </Card>
             </div>
+                <div>
+                    <img onClick={toggleModal} src="https://user-images.githubusercontent.com/106715328/193728781-5d56c03f-2cf6-44ab-ab8a-7e1368104233.jpg" alt="" className="h-9 w-9 "/>
+                </div>
+                <Modal
+                    show={modal}
+                    onClose={toggleModal}
+                >
+                    <Modal.Header>
+                        There Be Ye A Sea Monster!
+                        <div>
+                            ...or maybe more like a sea monkey, we're really not sure
+                        </div>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="space-y-6">
+                            <img src="https://user-images.githubusercontent.com/106715328/193729465-71890874-a99e-4ad4-8eb0-a577e64ac4d7.jpg" alt="scary man!"/>
+                            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                Congrats, you found out hidden Easter egg! It is the rare Gerticus Gallantis sea animal! Quite a rare find. 
+                            </p>
+                        </div>
+                    </Modal.Body>
+                </Modal>
             </div>
         </div>
 

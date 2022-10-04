@@ -31,60 +31,62 @@ function Login(){
     return(
       <div className="bg-[url('https://user-images.githubusercontent.com/106715328/192160566-39c11383-6372-4f95-b547-f14d3f75dd0b.jpg')] min-h-screen w-full bg-cover bg-center p-8">
         <div>
-          <img src="https://user-images.githubusercontent.com/106715328/193177695-e0443280-fbb9-40cc-b5b0-b3031a9c45a6.jpg" alt="" className="h-72 w-3/5 container mx-auto rounded-2xl border-4 border-blue-800"/>
+          <img src="https://user-images.githubusercontent.com/106715328/193177695-e0443280-fbb9-40cc-b5b0-b3031a9c45a6.jpg" alt="" className="h-42 w-2/5 container mx-auto rounded-2xl border-4 border-blue-800"/>
         </div>
-        <div className="p-5 mx-20 my-10 mb-0 border-2 border-black bg-white">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div>
-            <div className="mb-2 block">
-              <Label 
-                htmlFor="username"
-                value="Username" />
+        <div className="flex justify-center items-center">
+          <div className="p-5 mx-20 my-10 mb-0 border-2 border-black bg-white w-3/12 h-2/6 rounded-xl">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <div>
+              <div className="mb-2 block">
+                <Label 
+                  htmlFor="username"
+                  value="Username" />
+              </div>
+              <TextInput 
+                id="email1"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Enter your username..."
+                required={true} 
+              />
             </div>
-            <TextInput 
-              id="email1"
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter your username..."
-              required={true} 
-            />
+            <div>
+              <div className="mb-2 block">
+                <Label 
+                  htmlFor="password1"
+                  value="Password" />
+              </div>
+              <TextInput 
+                id="password1"
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your password..."
+                value={password}
+                required={true} 
+              />
           </div>
-          <div>
-            <div className="mb-2 block">
-              <Label 
-                htmlFor="password1"
-                value="Password" />
-            </div>
-            <TextInput 
-              id="password1"
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password..."
-              value={password}
-              required={true} 
-            />
-        </div>
-        <Button type="submit" gradientDuoTone="cyanToBlue" pill={true}>
-          Login
-        </Button>
-        <Link to="/">
-          <Button gradientDuoTone="cyanToBlue" pill={true}>
-              Return to Homepage
+          <Button type="submit" gradientDuoTone="cyanToBlue" pill={true}>
+            Login
           </Button>
-        </Link>
-      </form>
+          <Link to="/">
+            <Button gradientDuoTone="cyanToBlue" pill={true}>
+                Return to Homepage
+            </Button>
+          </Link>
+        </form>
+        </div>
+        {error ? (
+          <Toast>
+            <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-500 dark:bg-red-800 dark:text-red-200">
+            </div>
+            <div className="ml-3 text-sm font-normal">
+              {error}
+            </div>
+            <Toast.Toggle />
+          </Toast>
+        ) : null}
       </div>
-      {error ? (
-        <Toast>
-          <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-500 dark:bg-red-800 dark:text-red-200">
-          </div>
-          <div className="ml-3 text-sm font-normal">
-            {error}
-          </div>
-          <Toast.Toggle />
-        </Toast>
-      ) : null}
     </div>
     );
 }

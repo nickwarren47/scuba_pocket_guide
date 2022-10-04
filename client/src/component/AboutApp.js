@@ -115,7 +115,7 @@ function AboutApp(){
                         <div className="space-y-6">
                             <img src="https://user-images.githubusercontent.com/106715328/193729465-71890874-a99e-4ad4-8eb0-a577e64ac4d7.jpg" alt="scary man!"/>
                             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                Congrats, you found out hidden Easter egg! It is the rare Gerticus Gallantis sea animal! Quite a rare find. 
+                                Congrats, you found one of our hidden Easter eggs! It is the rare Gerticus Gallantis sea animal! Quite a rare find. 
                             </p>
                         </div>
                     </Modal.Body>

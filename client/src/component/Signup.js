@@ -58,7 +58,7 @@ function Signup(){
     return (
         <div className="bg-[url('https://user-images.githubusercontent.com/106715328/192161678-2717f82a-fc84-4eaa-9691-74793a92d5c7.jpg')] min-h-screen w-full bg-cover bg-center p-8">
             <div>
-                <img src="https://user-images.githubusercontent.com/106715328/193178138-286c49b7-ec3f-4425-8ced-4ae4ae23db15.jpg" alt="" className="h-72 w-3/5 container mx-auto rounded-2xl border-4 border-blue-800"/>
+                <img src="https://user-images.githubusercontent.com/106715328/193178138-286c49b7-ec3f-4425-8ced-4ae4ae23db15.jpg" alt="" className="h-42 w-2/5 container mx-auto rounded-2xl border-4 border-blue-800"/>
             </div>
             {/* <Navbar.Brand>
                 <Link to="/">
@@ -68,7 +68,8 @@ function Signup(){
                         alt="Wanderlust Logo" />
                 </Link>
             </Navbar.Brand> */}
-            <div className="p-5 mx-20 my-7 mb-0 border-2 border-black bg-white">
+            <div className="flex justify-center items-center">
+            <div className="p-5 mx-20 my-7 mb-0 border-2 border-black bg-white w-3/12 h-2/6 rounded-xl">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div>
                         <div className="mb-2 block">
@@ -236,6 +237,7 @@ function Signup(){
                     </Toast>
                 ) : null}
                 </form>
+            </div>
             </div>
         </div>
     )

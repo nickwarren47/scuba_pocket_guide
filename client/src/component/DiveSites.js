@@ -29,7 +29,6 @@ function DiveSites({ diveSites, handleFlagClick }){
             rating={diveSite.rating}
             id={diveSite.id}
             handleFlagClick={handleFlagClick} />
-
     ))
 
     return(

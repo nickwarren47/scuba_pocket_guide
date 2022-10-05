@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { Card, Carousel } from 'flowbite-react';
 import nick from "../image/nick_scuba.jpg"
-import { Button, Modal} from "flowbite-react";
+import {Modal} from "flowbite-react";
 
 
 function AboutApp(){

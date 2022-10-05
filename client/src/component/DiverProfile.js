@@ -9,6 +9,7 @@ function DiverProfile(){
     const params = useParams();
     const[diver, setDiver] = useState({})
     const[diveLogs, setDiveLogs] = useState([])
+    const[search, setSearch] = useState("")
 
 
     useEffect(() => {
@@ -23,13 +24,22 @@ function DiverProfile(){
       }, []);
 
     
-    // useEffect(() => {
-    //     fetch(`/divers/${params.id}/dive_logs`) 
-    //       .then(data => data.json())
-    //       .then(data => console.log(data))
-    // }, []);
+    useEffect(() => {
+        fetch(`/divers/${params.id}/dive_logs`) 
+          .then(data => data.json())
+          .then(data => setDiveLogs(data))
+        }, []);
 
-    const diveLogsPerDiver = diveLogs.map((diveLog) => (
+    const searchResults = diveLogs.filter(diveLog => (
+        diveLog.dive_site_name.toLowerCase().includes(search.toLowerCase()) ||
+        diveLog.dive_site_country.toLowerCase().includes(search.toLowerCase())
+    ))
+    
+    function handleSearch(e){
+        setSearch(e.target.value)
+    }
+    
+    const diveLogsPerDiver = searchResults.map(diveLog => (
         <DiveLogCards 
             dive_number = {diveLog.dive_number}
             dive_site_name = {diveLog.dive_site_name}
@@ -66,6 +76,13 @@ function DiverProfile(){
                </div>
            </div>
         </div>
+        <div className="flex items-center justify-center">
+            <input
+                className= "ml-5 bg-transparent rounded-lg border-white text-white font-bold text-2xl border-8"
+                onChange={handleSearch}
+                type="text"
+                placeholder="Search Dive Logs..."/>
+            </div>
         <div>
             {diveLogsPerDiver}
         </div>

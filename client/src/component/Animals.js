@@ -13,7 +13,7 @@ function Animals({ name, species_name, image, description, dangerous, size }){
             </div>
             {dangerous ? (
                 <div> 
-                    <h2 className="text-red-800 font-bold text-xl text-center">⚠️ Use Caution Around This Animal ⚠️</h2>
+                    <h2 className="text-red-800 font-bold text-xl text-center">⚠️ Use Caution Around This Animal ⚠️ </h2>
                 </div>
             ):(
                 null

@@ -103,11 +103,6 @@ function NavBar() {
                         </Navbar.Link>
 
                         <Navbar.Link
-                            active={location.pathname === "/divelog"}>
-                            {user ? (<Link to="/divelog"> Dive Logs </Link>) : null}
-                        </Navbar.Link>
-
-                        <Navbar.Link
                             active={location.pathname.startsWith("/diver")}>
                             {user ? (<Link to={`/diver/${user.id}`}> Diver Profile </Link>) : null}
                         </Navbar.Link>

@@ -51,7 +51,7 @@ function DiveLogForm({diveLogs}){
                 <img src="https://user-images.githubusercontent.com/106715328/193474677-22ca4cdb-5716-4d49-b5ca-3393a53c2b5c.jpg" alt="" className="h-36 w-2/5 container mx-auto rounded-2xl m-4 border-4 border-blue-800"/>
             </div>
         <div className="flex items-center justify-center">
-        <div className="p-10 my-16 w-2/5 mb-20 border-2 border-black bg-white">
+        <div className="p-10 my-10 w-2/5 mb-20 border-2 border-black bg-white">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div>
                         <div className="mb-2 block">

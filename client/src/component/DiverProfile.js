@@ -60,32 +60,37 @@ function DiverProfile(){
     ))
     return(
         <div className='review-section bg-[url("https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg")] min-h-screen w-full bg-cover bg-center p-20'>
-        <div className = "flex justify-center items-center">
-           <div className="w-2/5 review-card m-5">
-           <div className="pt-6 pr-6 pl-6 pb-40 min-w-lg bg-slate-200 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-6 ml-auto mr-auto h-3/4">
-               <h1 className="mb-2 text-center text-6xl font-semibold tracking-tight text-gray-900 dark:text-white">{diver.name} ({diver.country_from})</h1>
-                 <br/>
-               <div>
-                  <img src={diver.avatar} alt="" className="h-1/3 w-3/5 container mx-auto rounded-lg"/>
-               </div>
-                  <br/>
-                  <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Diver Certification Level: {diver.diver_cert_level}</h1>
-                  <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Diver Age: {diver.age}</h1>
-                  <h1 className="text-2xl text-black mb-3 dark:text-gray-400" >Diver Email: {diver.email}</h1>
-                  <h1 className="text-xl text-black mb-3 dark:text-gray-400" >Diver Username: {diver.username}</h1>
-               </div>
-           </div>
-        </div>
-        <div className="flex items-center justify-center">
-            <input
-                className= "ml-5 bg-transparent rounded-lg border-white text-white font-bold text-2xl border-8"
-                onChange={handleSearch}
-                type="text"
-                placeholder="Search Dive Logs..."/>
+            <div className = "flex justify-center items-center">
+                <div>
+                <div className="w-6/12 container mx-auto my-8">
+                        <div className="bg-white rounded-xl py-8">
+                        <div className="w-5/6 review-card m-2 container mx-auto bg-slate-300 rounded-lg">
+                        <h1 className="mb-2 text-center text-6xl font-semibold tracking-tight text-gray-900 dark:text-white">{diver.name} ({diver.country_from})</h1>
+                            <br/>
+                        <div>
+                            <img src={diver.avatar} alt="" className="h-1/3 w-3/5 container mx-auto rounded-lg"/>
+                        </div>
+                            <br/>
+                            <h1 className="text-2xl text-black mb-3 dark:text-gray-400 mx-3" >Diver Certification Level: {diver.diver_cert_level}</h1>
+                            <h1 className="text-2xl text-black mb-3 dark:text-gray-400 mx-3" >Diver Age: {diver.age}</h1>
+                            <h1 className="text-2xl text-black mb-3 dark:text-gray-400 mx-3" >Diver Email: {diver.email}</h1>
+                            <h1 className="text-2xl text-black mb-3 dark:text-gray-400 mx-3" >Diver Username: {diver.username}</h1>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            <div className="flex items-center justify-center my-3">
+                <input
+                    className= "ml-5 bg-transparent rounded-lg border-white text-white font-bold text-2xl border-8"
+                    onChange={handleSearch}
+                    type="text"
+                    placeholder="Search Dive Logs..."/>
+                </div>
+            <div className='grid grid-cols-3 gap-1 pt-3 justify-center'>
+                {diveLogsPerDiver}
             </div>
-        <div>
-            {diveLogsPerDiver}
-        </div>
+    </div>
+    </div>
     </div>
     )
 

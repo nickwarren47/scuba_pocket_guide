@@ -38,7 +38,7 @@ function Weather(){
                         type="text"/>
                 </div>
                 {/* <div className='flex items-center justify-center my-64'> */}
-                <div className='flex items-center justify-center my-32'>
+                <div className='flex items-center justify-center my-36'>
                         <div className="top">
                             <div className="temp">
                                 <h1 className="text-6xl text-white font-bold">Current Weather In:</h1>
@@ -56,16 +56,16 @@ function Weather(){
                             <br/>
                             <div className="flex items-center justify-center pl-11">
                                 <div className="feels text-center">
-                                    {data.main ? <p className="text-2xl text-white font-bold pr-9">{data.main.feels_like.toFixed()}°F</p> : null}
-                                    <p className="text-2xl text-white font-bold pr-9"> Feels Like</p>
+                                    {data.main ? <p className="text-3xl text-white font-bold pr-9">{data.main.feels_like.toFixed()}°F</p> : null}
+                                    <p className="text-3xl text-white font-bold pr-9"> Feels Like</p>
                                 </div> 
                                 <div className="humidity text-center">
-                                    {data.main ? <p className="text-2xl text-white font-bold pr-9">{data.main.humidity}%</p> : null}
-                                    <p className="text-2xl text-white font-bold pr-9"> Humidity</p>
+                                    {data.main ? <p className="text-3xl text-white font-bold pr-9">{data.main.humidity}%</p> : null}
+                                    <p className="text-3xl text-white font-bold pr-9"> Humidity</p>
                                 </div>
-                                <div className="wind text-2xl text-white font-bold text-center">
-                                    {data.wind ? <p className="text-2xl text-white font-bold pr-9">{data.wind.speed} MPH</p> : null}    
-                                    <p className="text-2xl text-white font-bold pr-9"> Wind Speed</p>
+                                <div className="wind text-3xl text-white font-bold text-center">
+                                    {data.wind ? <p className="text-3xl text-white font-bold pr-9">{data.wind.speed} MPH</p> : null}    
+                                    <p className="text-3xl text-white font-bold pr-9"> Wind Speed</p>
                                 </div>
                             </div>
                         </div>

@@ -5,8 +5,8 @@ function DiveLogCards({dive_number, dive_site_name, dive_site_country, date, tim
     return(
         <div>
             <div className = "flex justify-center items-center">
-            <div className="w-2/5 review-card m-5">
-            <div className="pt-6 pr-6 pl-6 pb-40 min-w-lg bg-slate-200 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-6 ml-auto mr-auto h-3/4 w-3/4">
+            <div className="w-11/12 review-card m-5">
+            <div className="pt-6 pl-6 pb-40 bg-slate-200 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-6">
                 <h1 className="mb-2 text-center text-6xl font-semibold tracking-tight text-gray-900 dark:text-white"> Entered Dive Log </h1>
                     <h1 className="text-2xl text-black mb-3 dark:text-gray-400 font-bold">Dive Number: 
                         <p className="font-normal"> {dive_number} </p>
@@ -45,10 +45,10 @@ function DiveLogCards({dive_number, dive_site_name, dive_site_country, date, tim
                         <p className="font-normal"> {bottom_temp}°C </p>
                     </h1>
                     <div>
-                        {fresh_or_salt_water ?  <p className="text-2xl text-black mb-3 dark:text-gray-400">Fresh Water</p> : <p className="text-xl text-black mb-3 dark:text-gray-400">Salt Water</p>}
+                        {fresh_or_salt_water ?  <p className="text-2xl text-black mb-3 dark:text-gray-400">Fresh Water</p> : <p className="text-2xl text-black mb-3 dark:text-gray-400">Salt Water</p>}
                     </div>
                     <div>
-                        {shore_or_boat ?  <p className="text-2xl text-black mb-3 dark:text-gray-400">Shore Dive</p> : <p className="text-xl text-black mb-3 dark:text-gray-400">Boat Dive</p>}
+                        {shore_or_boat ?  <p className="text-2xl text-black mb-3 dark:text-gray-400">Shore Dive</p> : <p className="text-2xl text-black mb-3 dark:text-gray-400">Boat Dive</p>}
                     </div>
                     <div>
                         {training_dive ?  <p className="text-2xl text-black mb-3 dark:text-gray-400">Training Dive ✅</p> : null}

@@ -58,7 +58,7 @@ function DiveSites({ diveSites, handleFlagClick }){
                         src={spg}
                         alt="SPG Logo"
                         name="SPG"
-                        size="lg"
+                        size="xl"
                     />
                     <Footer.LinkGroup>
                         <Footer.Link href="#">

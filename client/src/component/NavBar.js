@@ -13,7 +13,7 @@ function NavBar() {
     let location = useLocation();
 
     useEffect(() => {
-        if (location.pathname === "/" || location.pathname === "/login" || location.pathname === "/signup") {
+        if (location.pathname === "/login" || location.pathname === "/signup") {
             setIsNavBarHidden(true);
         }
         else {
@@ -36,7 +36,7 @@ function NavBar() {
                         <Link to="/">
                             <img
                                 src={spgLogo}
-                                className="mr-3 h-6 sm:h-20"
+                                className="mr-4 h-7 sm:h-24"
                                 alt="SPG Logo"/>
                         </Link>
                         <h1 className="text-3xl font-bold text-blue-800">Scuba Pocket Guide</h1>
@@ -63,16 +63,32 @@ function NavBar() {
                                 <Navbar.Toggle />
                             </>
                             ) : (
-                            <Button
-                                gradientDuoTone="cyanToBlue"
-                                pill={true}>
-                               <Link to="/login"> Login </Link> 
-                            </Button>
+                            <div className="columns-2">
+                                <div>
+                                <Button
+                                    gradientDuoTone="cyanToBlue"
+                                    pill={true}>
+                                <Link to="/login"> Login </Link> 
+                                </Button>
+                                </div>
+                                <div>
+                                <Button
+                                    gradientDuoTone="cyanToBlue"
+                                    pill={true}>
+                                <Link to="/signup"> Sign Up </Link> 
+                                </Button>
+                                </div>
+                            </div>
                         )}
 
                     </div>
                     <div className="mr-52">
                     <Navbar.Collapse>
+                        <Navbar.Link
+                            active={location.pathname === "/"}>
+                            <Link to="/"> Home Page </Link>
+                        </Navbar.Link>
+
                         <Navbar.Link
                             active={location.pathname === "/divesites"}>
                             <Link to="/divesites"> Dive Sites </Link>

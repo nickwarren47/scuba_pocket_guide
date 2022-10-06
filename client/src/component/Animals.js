@@ -7,9 +7,9 @@ function Animals({ name, species_name, image, description, dangerous, size }){
 
     return(
         <div>
-        <div className="pt-6 pr-6 pl-6 pb-40 min-w-lg bg-slate-200 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-6 ml-auto mr-auto h-3/4">
+        <div className="pt-6 pr-1 pl-6 pb-40 bg-slate-200 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-6 ml-auto mr-auto h-3/4 w-11/12">
             <div>
-                <img src={image} alt="" className="h-72 w-11/12 pl-6 rounded-lg"/>
+                <img src={image} alt="" className="h-96 w-11/12 pl-1 rounded-lg"/>
             </div>
             {dangerous ? (
                 <div> 

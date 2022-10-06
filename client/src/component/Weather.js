@@ -69,7 +69,7 @@ function Weather(){
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-gradient-to-tr from-gray-900 to-gray-900 object-cover absolute mix-blend-overlay rounded-3xl w-2/5 h-2/5">
+                        <div className="bg-gradient-to-tr from-gray-900 to-gray-900 object-cover absolute mix-blend-overlay rounded-3xl w-3/5 h-2/5">
                     </div>
                 </div>
             </div>

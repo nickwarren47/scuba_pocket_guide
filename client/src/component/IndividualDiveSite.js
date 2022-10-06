@@ -56,7 +56,7 @@ function IndividualDiveSite(){
                         </div>
                     </div>
                  </div>
-                 <div className="grid grid-cols-4 gap-6 pt-2 pl-28 pr-32 justify-center">
+                 <div className="grid grid-cols-3 gap-4 pl-16 pr-16 justify-center">
                      {animalsPerDiveSite}
                 </div>
               </div>

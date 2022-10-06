@@ -17,7 +17,7 @@ function AboutApp(){
         <div id='aboutpage'>
             <div className='bg-[url(https://user-images.githubusercontent.com/106715328/193150789-48bd5983-b7c6-4527-b372-29b9f831fe59.jpg)] min-h-screen w-full bg-cover bg-center p-7'>
             <div>
-                    <img src="https://user-images.githubusercontent.com/106715328/193474681-1b73c208-3102-4e93-bfc0-9222d40d6de9.jpg" alt="" className="h-42 w-2/4 container mx-auto m-6 border-4 border-blue-800"/>
+                    <img src="https://user-images.githubusercontent.com/106715328/193474681-1b73c208-3102-4e93-bfc0-9222d40d6de9.jpg" alt="" className="h-42 w-2/4 container rounded-2xl mx-auto m-6 border-4 border-blue-800"/>
             </div>
             <div className="h-96 w-2/4 container mx-auto rounded-2xl">
                 <Carousel slideInterval={5000}>

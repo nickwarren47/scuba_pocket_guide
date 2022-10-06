@@ -69,7 +69,7 @@ function Signup(){
                 </Link>
             </Navbar.Brand> */}
             <div className="flex justify-center items-center">
-            <div className="p-5 mx-20 my-7 mb-0 border-2 border-black bg-white w-3/12 h-2/6 rounded-xl">
+            <div className="p-5 mx-20 my-7 mb-0 border-2 border-black bg-white w-4/12 h-2/6 rounded-xl">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div>
                         <div className="mb-2 block">

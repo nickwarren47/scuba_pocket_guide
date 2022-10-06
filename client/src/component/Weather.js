@@ -26,7 +26,7 @@ function Weather(){
         <>
             <div className="bg-[url('https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg')] min-h-screen w-full bg-cover bg-center p-7">
                 <div>
-                    <img src="https://user-images.githubusercontent.com/106715328/193727310-d2de292e-592e-4187-8c65-d2f08896740a.jpg" alt="" className="h-36 w-1/3 container mx-auto rounded-2xl m-6 border-4 border-blue-800"/>
+                    <img src="https://user-images.githubusercontent.com/106715328/193727310-d2de292e-592e-4187-8c65-d2f08896740a.jpg" alt="" className="h-42 w-2/4 container mx-auto rounded-2xl m-6 border-4 border-blue-800"/>
                 </div>
                 <div className="flex items-center justify-center">
                     <input 

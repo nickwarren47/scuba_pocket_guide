@@ -7,9 +7,9 @@ function EnvironmentalConservation(){
         <div>
             <div className='bg-[url("https://user-images.githubusercontent.com/106715328/193144399-3c5219b0-ba6a-4567-b7e6-bdd045df1053.jpg")] min-h-screen w-full bg-cover bg-center p-7'>
             <div>
-                    <img src="https://user-images.githubusercontent.com/106715328/193474678-16fe32c3-9bfa-402e-99d5-37b857b2a5ff.jpg" alt="" className="h-36 w-2/5 container mx-auto rounded-2xl m-4 border-4 border-blue-800"/>
+                    <img src="https://user-images.githubusercontent.com/106715328/193474678-16fe32c3-9bfa-402e-99d5-37b857b2a5ff.jpg" alt="" className="h-42 w-2/4 container mx-auto rounded-2xl m-4 border-4 border-blue-800"/>
             </div>
-            <div className="w-5/12 container mx-auto my-16">
+            <div className="w-8/12 container mx-auto my-16">
                 <Card>
                     <div className="bg-slate-300 rounded-xl p-6">
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

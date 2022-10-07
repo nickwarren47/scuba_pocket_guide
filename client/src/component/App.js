@@ -22,20 +22,20 @@ function App() {
   const [diveLogs, setDiveLogs] = useState([])
 
   useEffect(() => {
-    fetch("/dive_sites") 
+    fetch("/api/dive_sites") 
       .then(data => data.json())
       .then(data => setDiveSites(data))
   }, []);
 
   useEffect(() => {
-    fetch("/dive_logs") 
+    fetch("/api/dive_logs") 
       .then(data => data.json())
       .then(data => setDiveLogs(data))
   }, []);
 
 
   useEffect(() => {
-    fetch("/me").then((response) => {
+    fetch("/api/me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
       }

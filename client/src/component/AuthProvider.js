@@ -7,7 +7,7 @@ function AuthProvider({ children }) {
     let signin = async (username, password) => {
 
         // do fetch to call /login in api
-        return fetch("/login", {
+        return fetch("/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -26,7 +26,7 @@ function AuthProvider({ children }) {
     };
 
     let signout = async () => {
-        return fetch("/logout", {
+        return fetch("/api/logout", {
             method: "DELETE",
         }).then(() => {
             setUser(null);

@@ -8,7 +8,7 @@ function DiveSiteCountry( {id, country, name, country_flag}){
     let navigate = useNavigate()
 
     function handleFlagClick(diveSiteID){
-        navigate(`/divesites/${diveSiteID}`)
+        navigate(`/api/divesites/${diveSiteID}`)
     }
 
     return(

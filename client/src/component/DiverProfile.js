@@ -17,7 +17,7 @@ function DiverProfile(){
             setDiver(auth.user)
         }
         else {
-            fetch(`/divers/${params.id}`)
+            fetch(`/api/divers/${params.id}`)
             .then(data => data.json())
             .then(data => setDiver(data));
         }
@@ -25,7 +25,7 @@ function DiverProfile(){
 
     
     useEffect(() => {
-        fetch(`/divers/${params.id}/dive_logs`) 
+        fetch(`/api/divers/${params.id}/dive_logs`) 
           .then(data => data.json())
           .then(data => setDiveLogs(data))
         }, []);

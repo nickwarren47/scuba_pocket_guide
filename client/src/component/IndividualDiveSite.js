@@ -12,14 +12,14 @@ function IndividualDiveSite(){
 
 
     useEffect(() => {
-        fetch(`/dive_sites/${diveSiteID}`)
+        fetch(`/api/dive_sites/${diveSiteID}`)
            .then(data => data.json())
            .then(data => setDiveSite(data));
      }, []);
 
      
     useEffect(() => {
-      fetch(`/dive_sites/${diveSiteID}/animals`)
+      fetch(`/api/dive_sites/${diveSiteID}/animals`)
          .then(data => data.json())
          .then(data => setAnimals(data));
       }, []);

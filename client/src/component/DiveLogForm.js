@@ -22,7 +22,7 @@ function DiveLogForm({diveLogs}){
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch("/dive_logs", {
+        fetch("/api/dive_logs", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -1,4 +1,4 @@
-class DiversController < ApplicationController
+class Api::DiversController < ApplicationController
     skip_before_action :authorize, only: [:index, :show, :create, :showDiverLogs, :showDiverID]
 
     def index 

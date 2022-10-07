@@ -1,4 +1,4 @@
-class DiveLogsController < ApplicationController
+class Api::DiveLogsController < ApplicationController
     wrap_parameters format:[]
     skip_before_action :authorize, only: [:index]
 

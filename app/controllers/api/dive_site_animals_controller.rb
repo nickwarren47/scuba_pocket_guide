@@ -1,4 +1,4 @@
-class DiveSiteAnimalsController < ApplicationController
+class Api::DiveSiteAnimalsController < ApplicationController
     skip_before_action :authorize, only: [:index, :show]
     wrap_parameters format: []
 

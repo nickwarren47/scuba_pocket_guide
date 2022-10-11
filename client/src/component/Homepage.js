@@ -5,6 +5,7 @@ import spg from "../image/spg.gif";
 import { Card } from 'flowbite-react';
 import nick from "../image/nick_scuba.jpg"
 import diver from "../image/diver.jpg"
+import angelfish from "../image/angelfish.jpg"
 
 
 function Homepage(){
@@ -39,22 +40,21 @@ return(
                     <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                         About the App
                     </h5>
-                    {/* <img src={nick} alt="" className="float-left h-4/5 w-64"/> */}
                     <p className="text-left text-2xl">
                     <img src={diver} alt="" className="float-left h-1/5 w-2/5 m-3"/>Hello and welcome!
                     This app is made by a diver for divers. The idea for the app was built from the necessity to have multiple scuba diving data available to a user all at once. My wife and I are devoted scuba divers and we are both PADI certified. Throughout our dives around the world,
                     I was upset by the lack of apps that give divers the ability to search for dive site locations, wildlife identification, weather conditions, re-education in proper dive procedures, gear recommendations, etc. Not to mention to have all these features in one app instead of 
                     various other apps. If you want to learn more about the app's development, myself, or our devotion to environment conservation, please feel free to click this link:    
-                        {/* <img src={nick} alt="" className="float-left h-4/5 w-64"/> */}
                     </p>
                     <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                         Caribbean Dive Sites and Wildlife
                     </h5>
-                    <p className="mb-3 font-dark text-gray-900 dark:text-gray-700 first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:float-left"> Protecting our oceans is vital! The creator of this app has travelled all over the world getting to experience the beauty that our oceans have to offer. That being said, this app's mission (in addition to providing the best diving experiences possible) is to bring awareness
-                        to environmental issues that our oceans are experiencing on a daily basis. Whether it be from ocean pollution to coral bleaching, every incident is harming our oceans and they need help. Please consider going to our "Environmental Conservation" tab to 
-                        see how you can help to keep our oceans alive and beautiful for future generations. It may not seem like it but even picking up a small piece of trash on the beach or while diving can have a monumental impact in preventing microplastics from entering into the 
-                        ocean. Additionally, coral reefs around the world are also facing an invasive species explosion. Fish species like Lionfish populations are exploding and are disrupting ecosystems. If you see any Lionfish, please report it to the local Fish and Wildlife department/officer. 
-                        The more we can understand where these invasive animals are living, the more we can do to stop them.  
+                    <p className="text-left text-2xl">
+                    <img src={angelfish} alt="" className="float-right h-1/5 w-2/5 m-3"/>
+                    The Caribbean sea is the one of the jewels of our oceans. The coral reefs sprinkled all throughout the Caribbean are exploding with biodiversity. Undoubtedly a must see for any avid scuba divers. The hope of this app is to eventually include other dive sites around the world 
+                    but to start, it will focus on the beauty and majesty of the Carribean. With the rich biodiversity, there are many animals/corals that are completely harmless to divers; however, there are animals and corals that are present in the Caribbean that can cause serious injury or even death. 
+                    For those animals/corals, our app provides warnings under each animal's photo to warn and instruct on how to stay safe around the animals. Additionally, the app provides information on each individual dive site and allows you to search based on country name or dive site name. To get started on 
+                    searching for dive sites and to see the wildlife present, click this link:    
                     </p>
                     <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                         Diver Features

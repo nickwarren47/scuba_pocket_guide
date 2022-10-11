@@ -47,7 +47,7 @@ function DiveSites({ diveSites, handleFlagClick }){
                     type="text"
                     placeholder="Search Dive Sites..."/>
                 </div>
-                <div className="grid grid-cols-4 gap-4 pt-6 pl-10 pr-10 justify-center">
+                <div className="grid grid-cols-3 gap-5 pt-6 pl-24 pr-24 container mx-auto">
                 {diveSiteList}
                 </div>
             </div>

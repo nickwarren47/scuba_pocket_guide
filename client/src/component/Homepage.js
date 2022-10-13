@@ -20,21 +20,6 @@ return(
                 </div>
                 <h1 className='text-blue-700 text-5xl font-bold mt-1 text-center pb-1'>Welcome to Scuba Pocket Guide!</h1>
                 <h2 className="text-blue-700 text-3xl font-bold mt-4 text-center pt-0 pb-6"> The app for aquatic wildlife, dive site info, weather updates, and so much more</h2>
-                {/* <div className="flex items-center justify-center mt-7 space-x-7">
-                    <TailwindcssButton>
-                        <Link to="/divesites"> Let's Get Diving! </Link>
-                    </TailwindcssButton>
-                    {!user ? (
-                        <>
-                            <TailwindcssButton>
-                                <Link to="/login"> Diver Login </Link>
-                            </TailwindcssButton>
-                            <TailwindcssButton>
-                                <Link to="/signup"> Diver Sign Up </Link>
-                            </TailwindcssButton>
-                        </>
-                    ) : null}
-                </div> */}
                 <div className="w-4/5 container mx-auto">
                 <Card>
                     <h5 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -74,11 +59,6 @@ return(
         </div>
     </div>
 )
-    function TailwindcssButton(props) {
-        return (
-            <button type="button" className="text-white bg-gradient-to-r from-cyan-500 to-cyan-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-large rounded-3xl text-3xl px-6 py-4 text-center mr-2 mb-2">{props.children}</button>
-        )
-    }
 }
 
 export default Homepage;

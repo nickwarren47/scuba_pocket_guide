@@ -17,8 +17,9 @@ This project has a React frontend and Rails backend. It also uses Taiwlind CSS f
 - Heroku CLI
 - Postgresql
 - Tailwind CSS 
+- Flowbite
 - React 
-- React
+- React Router Dom
 
 ## User Experience:
 SPG - Not Logged In:

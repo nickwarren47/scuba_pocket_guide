@@ -86,42 +86,42 @@ function NavBar() {
                     <Navbar.Collapse>
                         <Navbar.Link
                             active={location.pathname === "/"}>
-                            <Link to="/"> Home Page </Link>
+                            <Link to="/" className="text-lg"> Home Page </Link>
                         </Navbar.Link>
 
                         <Navbar.Link
                             active={location.pathname === "/divesites"}>
-                            <Link to="/divesites"> Dive Sites </Link>
+                            <Link to="/divesites" className="text-lg"> Dive Sites </Link>
                         </Navbar.Link>
 
                         <Navbar.Link
                             active={location.pathname === "/weather"}>
-                            <Link to="/weather"> Weather </Link>
+                            <Link to="/weather" className="text-lg"> Weather </Link>
                         </Navbar.Link>
 
                         <Navbar.Link
                             active={location.pathname === "/hand_signals"}>
-                            <Link to="/hand_signals"> Hand Signals </Link>
+                            <Link to="/hand_signals" className="text-lg"> Hand Signals </Link>
                         </Navbar.Link>
 
                         <Navbar.Link
                             active={location.pathname === "/about"}>
-                            <Link to="/about"> About </Link>
+                            <Link to="/about" className="text-lg"> About </Link>
                         </Navbar.Link>
 
                         <Navbar.Link
                             active={location.pathname === "/environment"}>
-                            <Link to="/environment"> Conservation </Link>
+                            <Link to="/environment" className="text-lg"> Conservation </Link>
                         </Navbar.Link>
 
                         <Navbar.Link
                             active={location.pathname === "/divelogform"}>
-                            {user ? (<Link to="/divelogform"> Dive Log Entry </Link>) : null}
+                            {user ? (<Link to="/divelogform" className="text-lg"> Dive Log Entry </Link>) : null}
                         </Navbar.Link>
 
                         <Navbar.Link
                             active={location.pathname.startsWith("/diver")}>
-                            {user ? (<Link to={`/diver/${user.id}`}> Diver Profile </Link>) : null}
+                            {user ? (<Link to={`/diver/${user.id}`} className="text-lg"> Diver Profile </Link>) : null}
                         </Navbar.Link>
 
                     </Navbar.Collapse>
